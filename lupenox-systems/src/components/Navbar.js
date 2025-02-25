@@ -1,14 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ toggleDarkMode, darkMode }) => {
   return (
-    <nav className="bg-gray-900 text-white p-4 flex justify-between items-center shadow-lg">
-      <h1 className="text-2xl font-bold">Lupenox Systems</h1>
-      <div className="flex space-x-6">
-        <Link to="/" className="hover:text-green-400 transition">Home</Link>
-        <Link to="/services" className="hover:text-green-400 transition">Services</Link>
-        <Link to="/contact" className="hover:text-green-400 transition">Contact</Link>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <Link className="navbar-brand" to="/">Lupenox Systems</Link>
+
+        {/* Navbar Toggle Button for Mobile */}
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto">
+            <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/services">Services</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/portfolio">Portfolio</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/blog">Blog</Link></li>
+          </ul>
+
+          {/* 🌙 Dark Mode Toggle Button (Always Visible) */}
+          <button onClick={toggleDarkMode} className="btn btn-outline-light ms-3">
+            {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
+          </button>
+        </div>
       </div>
     </nav>
   );
