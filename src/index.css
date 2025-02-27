@@ -1,0 +1,67 @@
+/* 🎭 Glitch Effect */
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #ff0000; }
+  20% { text-shadow: -2px -2px #00ff00; }
+  40% { text-shadow: 2px -2px #0000ff; }
+  60% { text-shadow: -2px 2px #ff0000; }
+  80% { text-shadow: 2px 2px #00ff00; }
+  100% { text-shadow: -2px -2px #0000ff; }
+}
+
+.glitch-text {
+  animation: glitch 1s infinite;
+  font-weight: bold;
+}
+
+/* 🚀 Portfolio Banner */
+.portfolio-banner {
+  background-image: url('/images/Cyber_Portfolio_Pic.webp');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* 🔥 Project Cards */
+.project-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.3);
+}
+
+/* 🎭 Dark Mode Styling */
+.dark-mode .portfolio-banner {
+  background: black;
+  color: limegreen;
+}
+
+.dark-mode .project-card {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 8px 16px rgba(0, 255, 0, 0.2);
+}
+
+.dark-mode .project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.4);
+}
+
+/* 🏆 Star & Fork Count */
+.text-muted {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
