@@ -16,6 +16,31 @@
   font-family: "Courier New", monospace;
 }
 
+.toggle-dark-mode {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: black;
+  color: limegreen;
+  border: 2px solid limegreen;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+
+.toggle-dark-mode:hover {
+  background: limegreen;
+  color: black;
+}
+
+/* 🌑 Dark Mode Styling */
+.dark-mode {
+  background-color: black;
+  color: limegreen;
+}
+
 /* Globe Centering Fix */
 .globe-container {
   display: flex;

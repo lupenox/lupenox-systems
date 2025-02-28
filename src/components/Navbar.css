@@ -1,0 +1,12 @@
+.btn-primary {
+    background: linear-gradient(90deg, #ff00ff, #800080);
+    border: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #800080, #ff00ff);
+    box-shadow: 0 0 12px rgba(255, 0, 255, 0.8);
+    transform: scale(1.05);
+}

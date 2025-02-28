@@ -10,23 +10,25 @@ import PortfolioPage from "./pages/PortfolioPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 import CaseStudyPage from "./pages/CaseStudyPage";
-import HackerModePage from "./pages/HackerModePage";  // ✅ Import the new Hacker Mode page
+import HackerModePage from "./pages/HackerModePage"; 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
 
+  // ✅ Apply Dark Mode on Mount
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
+    document.body.classList.toggle("dark-mode", darkMode);
+    localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
   return (
     <div className={darkMode ? "dark-theme" : "light-theme"}>
       <Router>
         <Navbar toggleDarkMode={() => setDarkMode(!darkMode)} darkMode={darkMode} />
+      
+
         <div className="container mt-5">
           <Routes>
             <Route path="/" element={<HomePage />} />  
@@ -36,9 +38,10 @@ function App() {
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/blog" element={<BlogPage />} />
-            <Route path="/hacker-mode" element={<HackerModePage />} />  {/* ✅ New Route Added */}
+            <Route path="/hacker-mode" element={<HackerModePage />} /> 
           </Routes>
         </div>
+
         <Footer /> 
       </Router>
     </div>

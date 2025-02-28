@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ toggleDarkMode, darkMode }) => {
+  const [isOnion, setIsOnion] = useState(false);
+
+  // ✅ Check if the user is on a .onion site
+  useEffect(() => {
+    setIsOnion(window.location.hostname.endsWith(".onion"));
+  }, []);
+
+  const toggleVersion = () => {
+    const onionURL = "http://plfxe3vmvztzm2ngkiqzup3hlaqig25ln6wc2mdysdf3jcnhotvsanqd.onion";
+    const clearnetURL = "https://your-clearnet-domain.com";
+
+    if (isOnion) {
+      window.location.href = clearnetURL; // Switch to clearnet
+    } else {
+      window.location.href = onionURL; // Switch to Tor
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -22,9 +40,14 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
             <li className="nav-item"><Link className="nav-link" to="/blog">Blog</Link></li>
           </ul>
 
-          {/* 🌙 Dark Mode Toggle Button (Always Visible) */}
+          {/* 🌙 Dark Mode Toggle Button */}
           <button onClick={toggleDarkMode} className="btn btn-outline-light ms-3">
             {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
+          </button>
+
+          {/* 🕵️ .onion Toggle Button */}
+          <button onClick={toggleVersion} className="btn btn-primary ms-3">
+            {isOnion ? "🌐 Switch to Clearnet" : "🕵️ Switch to .onion"}
           </button>
         </div>
       </div>

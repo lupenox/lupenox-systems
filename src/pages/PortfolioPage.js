@@ -10,12 +10,23 @@ const PortfolioPage = () => {
         const response = await fetch("https://api.github.com/users/lupenox/repos");
         const data = await response.json();
 
-        // Filter out forks & sort by stars
-        const filteredProjects = data
-          .filter(repo => !repo.fork)
-          .sort((a, b) => b.stargazers_count - a.stargazers_count);
+        const enrichedProjects = await Promise.all(
+          data
+            .filter(repo => !repo.fork) // Ignore forks
+            .map(async (repo) => {
+              // Fetch commit history
+              const commitRes = await fetch(repo.commits_url.replace("{/sha}", "/main"));
+              const commits = await commitRes.json();
 
-        setProjects(filteredProjects);
+              return {
+                ...repo,
+                lastCommit: commits[0]?.commit?.message || "No recent commits",
+                lastCommitDate: commits[0]?.commit?.committer?.date || "Unknown",
+              };
+            })
+        );
+
+        setProjects(enrichedProjects.sort((a, b) => b.stargazers_count - a.stargazers_count));
       } catch (error) {
         console.error("Error fetching GitHub projects:", error);
       }
@@ -30,13 +41,19 @@ const PortfolioPage = () => {
       <div className="portfolio-banner">My Portfolio</div>
 
       <Container className="mt-5">
-        <h1 className="text-primary text-center glitch-effect">GitHub Projects</h1>
+        <h1 className="text-primary text-center glitch-text">GitHub Projects</h1>
 
         {/* 🚀 Projects Grid */}
         <Row className="mt-4">
           {projects.map((project) => (
             <Col md={4} key={project.id} className="mb-4">
               <Card className="project-card shadow-lg">
+                {/* 🖼️ Dynamic Image */}
+                <Card.Img
+                  variant="top"
+                  src={`/images/portfolio/${project.name.toLowerCase().replace(/\s+/g, '-')}.png`}
+                  onError={(e) => e.target.style.display = 'none'}
+                />
                 <Card.Body>
                   <Card.Title className="glitch-text">{project.name}</Card.Title>
                   <Card.Text>
@@ -50,8 +67,10 @@ const PortfolioPage = () => {
                       <span className="badge bg-secondary">{project.language}</span>
                     )}
                   </div>
+                  {/* 📌 Last Commit Info */}
                   <div className="text-muted mt-2">
-                    ⭐ {project.stargazers_count} | 🔀 {project.forks_count}
+                    📝 Last Commit: "{project.lastCommit}" <br />
+                    📅 {new Date(project.lastCommitDate).toLocaleDateString()}
                   </div>
                 </Card.Body>
               </Card>
