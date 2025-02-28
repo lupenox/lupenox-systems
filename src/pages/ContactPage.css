@@ -1,0 +1,87 @@
+/* 🌌 Cyberpunk Contact Page */
+.contact-container {
+    text-align: center;
+    padding: 50px;
+    background: #111;
+    color: #ccc;
+    font-family: "Orbitron", sans-serif;
+}
+
+/* 🎮 Glitch Title */
+.glitch-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00fff7;
+    text-shadow: 0px 0px 5px #00fff7, 0px 0px 10px #00bcd4, 0px 0px 15px #008ba3;
+    animation: glitch 1.5s infinite alternate;
+}
+
+/* Subtext */
+.subtext {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* ⚡ Glowing Input Fields */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form .form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00fff7;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #00bcd4;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0px 0px 10px #00fff7;
+    border-color: #00fff7;
+}
+
+/* 🚀 Glowing Button */
+.glowing-btn {
+    background: #00fff7;
+    color: #111;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 15px rgba(0, 255, 247, 0.8);
+    cursor: pointer;
+}
+
+.glowing-btn:hover {
+    background: #00bcd4;
+    box-shadow: 0px 0px 25px rgba(0, 255, 247, 1);
+    transform: scale(1.05);
+}
+
+/* 🔥 Glitch Animation */
+@keyframes glitch {
+    0% { text-shadow: 0px 0px 5px #00fff7, 0px 0px 10px #00bcd4; }
+    100% { text-shadow: 0px 0px 10px #00fff7, 0px 0px 15px #008ba3; }
+}

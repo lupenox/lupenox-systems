@@ -1,87 +1,74 @@
+/* 🌑 General Styling */
 .about-container {
     text-align: center;
     color: #ccc;
     background: #111;
     padding-bottom: 50px;
-    font-family: "Orbitron", sans-serif; /* Cyberpunky Font */
+    font-family: "Orbitron", sans-serif;
 }
 
-/* 🚀 HERO SECTION */
-.hero-section {
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 1); /* Stronger Glow */
-    backdrop-filter: blur(5px); /* Slight Blur for Futuristic Feel */
-    border-bottom: 2px solid rgba(0, 188, 212, 0.7); /* Glowing Divider */
-}
-
-/* 🖼️ PROFILE & FUN IMAGES */
-.portrait, .fun-img {
-    width: 200px;
-    border-radius: 50%;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 188, 212, 0.8); /* Glowing Effect */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.portrait:hover, .fun-img:hover {
-    transform: scale(1.08) rotate(2deg); /* Slight Hover Animation */
-    box-shadow: 0 0 20px rgba(0, 255, 212, 1);
-}
-
-/* 🔥 SERVICES SECTION */
-.services-section {
-    background: rgba(255, 255, 255, 0.05); /* Slight Contrast */
-    padding: 20px;
+/* 🎓 Education Section */
+.education-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2); /* Subtle Glow */
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
     margin: 50px auto;
     width: 80%;
     max-width: 900px;
 }
 
-.services-section h2 {
-    text-transform: uppercase;
+.education-section h3 {
+    margin-top: 20px;
+    font-size: 1.3rem;
     color: #00bcd4;
-    text-shadow: 0 0 10px rgba(0, 188, 212, 1); /* Glowing Title */
 }
 
-.services-section ul {
+.education-list, .course-list {
     list-style: none;
     padding: 0;
 }
 
-.services-section li {
-    font-size: 1.2rem;
+.education-list li, .course-list li {
+    font-size: 1.1rem;
     margin: 10px 0;
-    background: rgba(255, 255, 255, 0.08); /* Subtle Background */
+    background: rgba(255, 255, 255, 0.08);
     padding: 12px;
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
 }
 
-.services-section li:hover {
-    background: rgba(0, 188, 212, 0.3); /* Hover Glow */
+.education-list li:hover, .course-list li:hover {
+    background: rgba(0, 188, 212, 0.3);
 }
 
-/* 💡 CTA BUTTON */
+/* 📖 Services Section */
+.services-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+    margin: 50px auto;
+    width: 80%;
+    max-width: 900px;
+}
+
+/* 🚀 Call to Action */
+.cta-section {
+    text-align: center;
+    padding: 50px;
+    background: #343a40;
+    color: white;
+}
+
 .cta-btn {
     background: #00bcd4;
-    color: #fff;
+    color: white;
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
     font-size: 1.2rem;
     font-weight: bold;
-    box-shadow: 0 0 15px rgba(0, 255, 212, 0.8);
     transition: 0.3s ease-in-out;
 }
 
@@ -91,7 +78,41 @@
     transform: scale(1.05);
 }
 
-/* 🚀 CYBERPUNK CURSOR */
-body {
-    cursor: url("https://cur.cursors-4u.net/others/oth-6/oth545.cur"), auto;
+/* Ensure the services section is centered */
+.services-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+    margin: 50px auto;
+    width: 80%;
+    max-width: 900px;
+    text-align: center; /* Center heading and text */
+}
+
+/* Center the grid and cards */
+.services-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 900px; /* Prevents full-width stretching */
+    margin: 0 auto; /* Centers the grid */
+}
+
+/* Ensure each service card is centered properly */
+.service-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px; /* Adjust for better proportion */
+    text-align: center; /* Ensure text inside is centered */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 188, 212, 0.8);
 }

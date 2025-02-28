@@ -1,0 +1,72 @@
+/* 🌌 Cyberpunk Portfolio Styles */
+.portfolio-banner {
+    background: linear-gradient(90deg, #00bcd4, #0066ff);
+    text-align: center;
+    padding: 40px 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 212, 1);
+    border-bottom: 2px solid rgba(0, 255, 212, 0.8);
+}
+
+.glowing-header {
+    text-align: center;
+    color: #00bcd4;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 1);
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 212, 1);
+}
+
+.glitch-text {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ff0033;
+    text-shadow: 2px 2px 10px rgba(255, 0, 51, 0.8);
+}
+
+.cyberpunk-button {
+    background: linear-gradient(90deg, #ff00ff, #ffcc00);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+}
+
+.cyberpunk-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 1);
+}
+
+.language-badge {
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.commit-info {
+    font-family: 'Courier New', monospace;
+    color: #0f0;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
