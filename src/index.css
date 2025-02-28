@@ -20,7 +20,7 @@
 
 /* 🚀 Portfolio Banner */
 .portfolio-banner {
-  background-image: url("/home/logan-lapierre/Desktop/personal_projects/lupenox-systems/public/images/stars.webp");
+  background-image: url("https://via.placeholder.com/150");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -164,7 +164,7 @@ section.visible {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/home/logan-lapierre/Desktop/personal_projects/lupenox-systems/public/images/stars.webp");
+  background-image: url("https://via.placeholder.com/150");
   background-size: cover;
   opacity: 0.25;
   z-index: 0;
