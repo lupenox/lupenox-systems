@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import "./HomePage.css"; 
-import homeBanner from "../assets/images/home-banner.png"; // ✅ Import the image
+import homeBanner from "../assets/images/last_banner.webp"; // ✅ Import the image
 
 const HomePage = () => {
   // 🛠 Scroll Animation for Sections
@@ -25,31 +25,34 @@ const HomePage = () => {
       <main>
         {/* 🔥 Hero Banner Section */}
         <section
-          className="home-banner"
-          style={{ backgroundImage: `url(${homeBanner})` }}
-        >
-          <h1 className="glitch-text">
-            <Typewriter
-              options={{
-                strings: [
-                  "Welcome to Lupenox Systems",
-                  "Cybersecurity & AI Innovation",
-                  "Building a Safer Digital World",
-                ],
-                autoStart: true,
-                loop: true,
-                delay: 75,
-                deleteSpeed: 50,
-              }}
-            />
-          </h1>
-        </section>
+  className="home-banner"
+  style={{ backgroundImage: `url(${homeBanner})` }}
+>
+  <div className="typewriter-text-container">
+    <h1 className="typewriter-text">
+      <Typewriter
+        options={{
+          strings: [
+            "Welcome to Lupenox Systems",
+            "Cybersecurity & AI Innovation",
+            "Building a Safer Digital World",
+          ],
+          autoStart: true,
+          loop: true,
+          delay: 75,
+          deleteSpeed: 50,
+        }}
+      />
+    </h1>
+  </div>
+</section>
+
 
         {/* 🛡️ About Section */}
         <section className="about-section">
           <h2>About Lupenox Systems</h2>
           <p>
-            At Lupenox Systems, we specialize in cutting-edge <strong>cybersecurity</strong> & <strong>AI solutions</strong> 
+            At Lupenox Systems, we specialize in cutting-edge <strong>cybersecurity</strong> & <strong>AI solutions </strong> 
             to safeguard your data and optimize your digital presence. From penetration testing to AI-driven security automation, 
             we ensure that businesses and individuals stay protected in an evolving digital landscape.
           </p>
