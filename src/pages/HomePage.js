@@ -25,18 +25,18 @@ const HomePage = () => {
       <main>
         {/* 🔥 Hero Banner Section */}
         <section
-  className="home-banner"
-  style={{ backgroundImage: `url(${homeBanner})` }}
+          className="home-banner"
+          style={{ backgroundImage: `url(${homeBanner})` }}
 >
-  <div className="typewriter-text-container">
-    <h1 className="typewriter-text">
-      <Typewriter
-        options={{
-          strings: [
+            <div className="typewriter-text-container">
+              <h1 className="typewriter-text">
+                 <Typewriter
+                  options={{
+                  strings: [
             "Welcome to Lupenox Systems",
             "Cybersecurity & AI Innovation",
             "Building a Safer Digital World",
-          ],
+                  ],
           autoStart: true,
           loop: true,
           delay: 75,
@@ -60,7 +60,7 @@ const HomePage = () => {
 
         {/* ⚙️ Services Preview Section */}
         <section className="services-preview">
-          <h2>Our Services</h2>
+          <h2 className="glowing-header">Our Services</h2>
           <div className="service-grid">
             <div className="service-card">
               <h3>🔐 Cybersecurity Audits</h3>

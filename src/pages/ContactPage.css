@@ -1,87 +1,90 @@
-/* 🌌 Cyberpunk Contact Page */
+
+/* ContactPage.css */
 .contact-container {
-    text-align: center;
-    padding: 50px;
-    background: #111;
-    color: #ccc;
-    font-family: "Orbitron", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f 30%, #111111 70%);
+    padding: 40px;
 }
 
-/* 🎮 Glitch Title */
-.glitch-text {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #00fff7;
-    text-shadow: 0px 0px 5px #00fff7, 0px 0px 10px #00bcd4, 0px 0px 15px #008ba3;
-    animation: glitch 1.5s infinite alternate;
-}
-
-/* Subtext */
-.subtext {
-    font-size: 1.2rem;
-    opacity: 0.8;
-    margin-bottom: 20px;
-}
-
-/* ⚡ Glowing Input Fields */
-.contact-form {
+.contact-form-wrapper {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-form .form-group {
-    text-align: left;
+.contact-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0ff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    margin-bottom: 10px;
+}
+
+.contact-subtext {
+    font-size: 1rem;
+    color: #bbb;
     margin-bottom: 20px;
 }
 
 .contact-form label {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #00fff7;
     display: block;
+    font-size: 1rem;
+    color: #0ff;
+    margin-top: 15px;
+    text-align: left;
 }
 
-.contact-form input,
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    border-radius: 8px;
+    background: #111;
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #0ff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    outline: none;
+}
+
 .contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.send-button {
+    display: block;
     width: 100%;
     padding: 12px;
-    border: 2px solid #00bcd4;
-    border-radius: 5px;
-    background: #222;
-    color: #fff;
-    outline: none;
-    transition: all 0.3s ease-in-out;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    box-shadow: 0px 0px 10px #00fff7;
-    border-color: #00fff7;
-}
-
-/* 🚀 Glowing Button */
-.glowing-btn {
-    background: #00fff7;
+    margin-top: 20px;
+    background: #0ff;
     color: #111;
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0px 0px 15px rgba(0, 255, 247, 0.8);
+    border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
-.glowing-btn:hover {
+.send-button:hover {
     background: #00bcd4;
-    box-shadow: 0px 0px 25px rgba(0, 255, 247, 1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
     transform: scale(1.05);
-}
-
-/* 🔥 Glitch Animation */
-@keyframes glitch {
-    0% { text-shadow: 0px 0px 5px #00fff7, 0px 0px 10px #00bcd4; }
-    100% { text-shadow: 0px 0px 10px #00fff7, 0px 0px 15px #008ba3; }
 }

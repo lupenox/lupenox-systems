@@ -7,7 +7,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <div 
         className="hero-section" 
-        style={{ backgroundImage: `url("https://placehold.co/1200x300/111/ccc?text=Banner+Image")` }}
+        style={{ backgroundImage: `url("/path/to/your/banner-image.jpg")` }}
       >
         <h1>About Lupenox Systems</h1>
         <p className="subheading">Secure. Develop. Innovate.</p>
@@ -23,8 +23,8 @@ const AboutPage = () => {
         <div className="about-text">
           <h2>Meet Logan Lapierre</h2>
           <p>
-            Hi, I’m Logan! I founded **Lupenox Systems** to bring **top-tier cybersecurity, web development, and IT solutions** 
-            to businesses and individuals. My mission is to **ensure digital assets are safe, efficient, and optimized** through 
+            Hi, I’m Logan! I founded <strong>Lupenox Systems</strong> to bring <strong>top-tier cybersecurity, web development, and IT solutions</strong> 
+            to businesses and individuals. My mission is to <strong>ensure digital assets are safe, efficient, and optimized</strong> through 
             cutting-edge security measures and AI-powered solutions.
           </p>
         </div>
@@ -34,9 +34,9 @@ const AboutPage = () => {
       <div className="education-section">
         <h2 className="neon-text">🎓 Education & Certifications</h2>
         <ul className="education-list">
-          <li>📚 **B.S. Computer Science** (Expected December 2026) – UWM Milwaukee</li>
-          <li>🌐 **Web Development Certificate** (Expected December 2026) – UWM Milwaukee</li>
-          <li>🔐 **Cybersecurity Certificate** (Expected Spring 2027) – UWM Milwaukee</li>
+          <li>📚 <strong>B.S. Computer Science</strong> (Expected December 2026) – UWM Milwaukee</li>
+          <li>🌐 <strong>Web Development Certificate</strong> (Expected December 2026) – UWM Milwaukee</li>
+          <li>🔐 <strong>Cybersecurity Certificate</strong> (Expected Spring 2027) – UWM Milwaukee</li>
         </ul>
         <h3>Relevant Coursework:</h3>
         <ul className="course-list">

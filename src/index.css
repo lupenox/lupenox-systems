@@ -1,3 +1,27 @@
+/* 🌍 Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Orbitron', sans-serif;
+  background: var(--section-bg);
+  color: var(--primary-text);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 🔥 Light Mode */
+.light-mode {
+  --primary-text: #111;
+  --secondary-text: #444;
+  --card-bg: #fdfdfd !important;
+  --card-border: rgba(0, 0, 0, 0.15);
+  --section-bg: #f5f5f5 !important;
+  --highlight: #0056b3;
+}
+
 /* 🎭 Glitch Effect */
 @keyframes glitch {
   0% { text-shadow: 2px 2px #ff0000; }
@@ -11,16 +35,16 @@
 .glitch-text {
   animation: glitch 1s infinite;
   font-weight: bold;
-  font-size: 4rem; /* 🔥 Bigger & Bolder */
+  font-size: 4rem;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 3px;
-  text-shadow: 3px 3px 6px rgba(0, 255, 0, 0.8);
+  color: var(--primary-text) !important;
+  text-shadow: none !important;
 }
 
 /* 🚀 Portfolio Banner */
 .portfolio-banner {
-  background-image: url("https://via.placeholder.com/150");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,54 +57,85 @@
   font-size: 3rem;
   font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(10px); /* 🔥 Adds a futuristic glass effect */
+  backdrop-filter: blur(10px);
   width: 100%;
 }
 
-html {
-  scroll-behavior: smooth;
+.light-mode .portfolio-banner {
+  background: linear-gradient(to right, #e0e0e0, #ffffff);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  color: #222;
 }
 
-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* 🔥 Project Cards - Futuristic Cyberpunk Look */
+/* 📌 Project Cards */
 .project-card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   border-radius: 10px;
   overflow: hidden;
-  background: rgba(0, 255, 0, 0.1); /* ✅ Subtle green tint */
-  backdrop-filter: blur(10px);
-  box-shadow: 0px 4px 8px rgba(0, 255, 0, 0.2); /* ✅ Cyberpunk glow */
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.4);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* 🏆 Star & Fork Count */
-.text-muted {
+/* Improve Card Appearance in Light Mode */
+.light-mode .project-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 📜 Commit Info */
+.commit-info {
+  font-family: 'Courier New', monospace;
+  color: var(--secondary-text);
   font-size: 0.9rem;
-  display: flex;
-  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
-/* 🌑 Dark Mode Global Styles */
+/* 🔘 Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0056b3, #007bff);
+  box-shadow: 0px 0px 12px rgba(0, 0, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.light-mode .btn-primary {
+  background: #007bff !important;
+  border-color: #0056b3 !important;
+  color: white;
+}
+
+.light-mode .btn-primary:hover {
+  background: #0056b3 !important;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎭 Dark Mode */
 .dark-mode {
-  background-color: black;
-  color: limegreen;
+  --primary-text: #0bc;
+  --secondary-text: #ccc;
+  --card-bg: rgba(20, 20, 20, 0.95);
+  --card-border: rgba(0, 188, 212, 0.2);
+  --section-bg: #111;
+  --highlight: #0bc;
 }
 
-/* 🎭 Dark Mode Tweaks */
 .dark-mode .portfolio-banner {
   background: black;
   color: limegreen;
@@ -96,9 +151,9 @@ section.visible {
   box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.4);
 }
 
-/* 🖥 Navbar Styling */
+/* 🏆 Navbar */
 .navbar {
-  background: rgba(0, 0, 0, 0.8); /* ✅ Slight transparency */
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
 }
 
@@ -106,92 +161,7 @@ section.visible {
   background: rgba(0, 0, 0, 0.9);
 }
 
-/* ⚡ Hero Section Tweaks */
-.hero-section {
-  position: relative;
-  animation: fadeIn 1.5s ease-in-out;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.hero-section h1 {
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
-}
-
-/* 💀 Matrix Effect */
-@keyframes matrixRain {
-  from { transform: translateY(-100%); opacity: 1; }
-  to { transform: translateY(100%); opacity: 0.1; }
-}
-
-.matrix-effect {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  overflow: hidden;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.matrix-effect span {
-  position: absolute;
-  top: 0;
-  left: calc(10% * var(--i)); /* Randomized start positions */
-  font-family: monospace;
-  font-size: 1.2rem;
-  color: #00ff00;
-  opacity: 0.7;
-  white-space: nowrap;
-  animation: matrixRain linear infinite;
-  animation-duration: calc(3s + var(--i) * 0.5s); /* Vary speed */
-}
-
-/* 🔥 Starry Background for Dark Mode */
-.dark-mode::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://via.placeholder.com/150");
-  background-size: cover;
-  opacity: 0.25;
-  z-index: 0;
-  animation: starsTwinkle 12s infinite alternate ease-in-out;
-}
-
-@keyframes starsTwinkle {
-  from { opacity: 0.1; }
-  to { opacity: 0.3; }
-}
-
-/* 🦾 Cyberpunk Button Styling */
-.btn-primary {
-  background: linear-gradient(90deg, #00ff00, #00bbff);
-  border: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-  background: linear-gradient(90deg, #00bbff, #00ff00);
-  box-shadow: 0px 0px 12px rgba(0, 255, 0, 0.8);
-  transform: scale(1.05);
-}
-
-/* 🖥️ Footer Styling */
+/* 🦾 Footer */
 .footer {
   position: relative;
   bottom: 0;
@@ -216,3 +186,14 @@ section.visible {
   background-color: #181818;
   color: white;
 }
+
+/* 🔥 Fix Card Text Color in Light Mode */
+.light-mode .card-text,
+.light-mode .text-light {
+    color: #111 !important; /* Forces text to be dark in light mode */
+}
+
+.light-mode .portfolio-page .text-light {
+  color: #111 !important; /* Ensures text is dark in light mode */
+}
+

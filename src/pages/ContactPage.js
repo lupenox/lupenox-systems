@@ -1,31 +1,28 @@
 import React from "react";
 import "./ContactPage.css";
 
-function ContactPage() {
+const ContactPage = () => {
   return (
     <div className="contact-container">
-      {/* 🔥 Contact Header */}
-      <h1 className="glitch-text">📩 Contact Us</h1>
-      <p className="subtext">Let's connect. Reach out for inquiries, collaborations, or just to say hello.</p>
-
-      {/* 📧 Contact Form */}
-      <form className="contact-form">
-        <div className="form-group">
-          <label>Name</label>
-          <input type="text" placeholder="Your Name" />
-        </div>
-        <div className="form-group">
-          <label>Email</label>
-          <input type="email" placeholder="Your Email" />
-        </div>
-        <div className="form-group">
-          <label>Message</label>
-          <textarea rows="4" placeholder="Your Message"></textarea>
-        </div>
-        <button type="submit" className="glowing-btn">Send Message</button>
-      </form>
+      <div className="contact-form-wrapper">
+        <h2 className="contact-title">📬 CONTACT US</h2>
+        <p className="contact-subtext">Let’s connect. Reach out for inquiries, collaborations, or just to say hello.</p>
+        
+        <form className="contact-form">
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required />
+          
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" placeholder="Your Email" required />
+          
+          <label htmlFor="message">Message</label>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          
+          <button type="submit" className="send-button">SEND MESSAGE</button>
+        </form>
+      </div>
     </div>
   );
-}
+};
 
 export default ContactPage;

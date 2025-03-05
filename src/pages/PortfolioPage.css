@@ -4,137 +4,66 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 350px; /* Adjust if necessary */
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-bottom: 2px solid rgba(0, 255, 212, 0.8);
+    border-bottom: 2px linear-gradient(90deg, #007bff, #0044cc);
+    position: relative;
 }
 
 .portfolio-text-container {
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
-    padding: 15px 30px;
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-    display: inline-block;
-}
-
-.text-light card-text p{
-    color: black
-}
-
-.portfolio-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    color: #ffffff;
-    text-shadow: 
-        0 0 12px rgba(0, 255, 255, 0.9), 
-        0 0 20px rgba(0, 255, 255, 0.6), 
-        0 0 30px rgba(0, 255, 255, 0.4);
-}
-
-/* 💡 Portfolio Subtitle */
-.portfolio-subtitle {
-    font-size: 1.2rem;
-    color: #ddd;
+    display: none;
 }
 
 
-.glowing-header {
-    text-align: center;
-    color: var(--highlight);
-    font-size: 2rem;
-    text-shadow: none;
-    font-weight: bold;
+.onion-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.project-card {
-    background: var(--card-bg) !important;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    color: var(--primary-text) !important;
-    border: 1px solid var(--card-border);
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px var(--highlight);
-}
-
-.glitch-text {
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: var(--primary-text) !important;
-    text-shadow: none !important;
-}
-
-.cyberpunk-button {
-    background: linear-gradient(90deg, #ff00ff, #ffcc00);
+.onion-button {
+    background: linear-gradient(90deg, #007bff, #0044cc);
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     transition: 0.3s ease-in-out;
-    box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.cyberpunk-button:hover {
+.onion-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 0, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 1);
 }
 
-.language-badge {
-    background: var(--card-border);
-    color: var(--primary-text);
-    padding: 5px 10px;
+.github-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #007bff, #0044cc);
+    color: white;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-}
-
-.commit-info {
-    font-family: 'Courier New', monospace;
-    color: var(--secondary-text);
-    font-size: 0.9rem;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px;
-    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+    text-decoration: none;
+    font-weight: bold;
     margin-top: 10px;
 }
 
-:root {
-    --primary-text: #222;
-    --secondary-text: #555;
-    --card-bg: #ffffff;
-    --card-border: rgba(0, 0, 0, 0.1);
-    --section-bg: #f8f8f8;
-    --highlight: #007bff;
+.github-button:hover {
+    transform: scale(1.0);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 1);
 }
 
-.dark-mode h2 {
-    color: white;
-}
-
-/* 🌑 Dark Mode */
-.dark-mode {
-    --primary-text: #0bc;
-    --secondary-text: #ccc;
-    --card-bg: rgba(20, 20, 20, 0.95);
-    --card-border: rgba(0, 188, 212, 0.2);
-    --section-bg: #111;
-    --highlight: #0bc;
-}
-
-/* ☀️ Light Mode */
-.light-mode {
-    --primary-text: #222;
-    --secondary-text: #555;
-    --card-bg: #ffffff !important;
-    --card-border: rgba(0, 0, 0, 0.1);
-    --section-bg: #f8f8f8 !important;
-    --highlight: #007bff;
+.project-card {
+    padding: 30px;
+    margin: 20px;
 }
