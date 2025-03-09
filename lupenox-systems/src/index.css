@@ -1,0 +1,218 @@
+/* 🎭 Glitch Effect */
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #ff0000; }
+  20% { text-shadow: -2px -2px #00ff00; }
+  40% { text-shadow: 2px -2px #0000ff; }
+  60% { text-shadow: -2px 2px #ff0000; }
+  80% { text-shadow: 2px 2px #00ff00; }
+  100% { text-shadow: -2px -2px #0000ff; }
+}
+
+.glitch-text {
+  animation: glitch 1s infinite;
+  font-weight: bold;
+  font-size: 4rem; /* 🔥 Bigger & Bolder */
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 6px rgba(0, 255, 0, 0.8);
+}
+
+/* 🚀 Portfolio Banner */
+.portfolio-banner {
+  background-image: url("/home/logan-lapierre/Desktop/personal_projects/lupenox-systems/public/images/stars.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px); /* 🔥 Adds a futuristic glass effect */
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🔥 Project Cards - Futuristic Cyberpunk Look */
+.project-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0, 255, 0, 0.1); /* ✅ Subtle green tint */
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 8px rgba(0, 255, 0, 0.2); /* ✅ Cyberpunk glow */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.4);
+}
+
+/* 🏆 Star & Fork Count */
+.text-muted {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 🌑 Dark Mode Global Styles */
+.dark-mode {
+  background-color: black;
+  color: limegreen;
+}
+
+/* 🎭 Dark Mode Tweaks */
+.dark-mode .portfolio-banner {
+  background: black;
+  color: limegreen;
+}
+
+.dark-mode .project-card {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 8px 16px rgba(0, 255, 0, 0.2);
+}
+
+.dark-mode .project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.4);
+}
+
+/* 🖥 Navbar Styling */
+.navbar {
+  background: rgba(0, 0, 0, 0.8); /* ✅ Slight transparency */
+  backdrop-filter: blur(10px);
+}
+
+.dark-mode .navbar {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* ⚡ Hero Section Tweaks */
+.hero-section {
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-section h1 {
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* 💀 Matrix Effect */
+@keyframes matrixRain {
+  from { transform: translateY(-100%); opacity: 1; }
+  to { transform: translateY(100%); opacity: 0.1; }
+}
+
+.matrix-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.matrix-effect span {
+  position: absolute;
+  top: 0;
+  left: calc(10% * var(--i)); /* Randomized start positions */
+  font-family: monospace;
+  font-size: 1.2rem;
+  color: #00ff00;
+  opacity: 0.7;
+  white-space: nowrap;
+  animation: matrixRain linear infinite;
+  animation-duration: calc(3s + var(--i) * 0.5s); /* Vary speed */
+}
+
+/* 🔥 Starry Background for Dark Mode */
+.dark-mode::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/home/logan-lapierre/Desktop/personal_projects/lupenox-systems/public/images/stars.webp");
+  background-size: cover;
+  opacity: 0.25;
+  z-index: 0;
+  animation: starsTwinkle 12s infinite alternate ease-in-out;
+}
+
+@keyframes starsTwinkle {
+  from { opacity: 0.1; }
+  to { opacity: 0.3; }
+}
+
+/* 🦾 Cyberpunk Button Styling */
+.btn-primary {
+  background: linear-gradient(90deg, #00ff00, #00bbff);
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #00bbff, #00ff00);
+  box-shadow: 0px 0px 12px rgba(0, 255, 0, 0.8);
+  transform: scale(1.05);
+}
+
+/* 🖥️ Footer Styling */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #222;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: white;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #0d6efd;
+}
+
+.dark-mode footer {
+  background-color: #181818;
+  color: white;
+}
