@@ -4,9 +4,17 @@ import { Link } from "react-router-dom";
 const Navbar = ({ toggleDarkMode, darkMode }) => {
   const [isOnion, setIsOnion] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [showTorWarning, setShowTorWarning] = useState(false);
 
   useEffect(() => {
-    setIsOnion(window.location.hostname.endsWith(".onion"));
+    const hostname = window.location.hostname;
+    const isOnionSite = hostname.endsWith(".onion");
+    setIsOnion(isOnionSite);
+
+    // Display warning if not on Tor and trying to access .onion
+    if (isOnionSite && !navigator.userAgent.includes("Tor")) {
+      setShowTorWarning(true);
+    }
   }, []);
 
   const toggleVersion = () => {
@@ -46,9 +54,19 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
             {isOnion ? "🌐 Clearnet" : "🕵️ .onion"}
           </button>
         </div>
+
+        {/* Tor Warning */}
+        {showTorWarning && (
+          <div className="tor-warning">
+            ⚠️ You're not accessing this site via the Tor network. 
+            <a href="https://www.torproject.org/" target="_blank" rel="noopener noreferrer">
+              Download Tor Browser
+            </a> for secure access.
+          </div>
+        )}
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default Navbar; fmgo0rfmg

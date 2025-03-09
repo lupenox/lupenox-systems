@@ -95,3 +95,17 @@
     color: #111;
   }
   
+  .tor-warning {
+    background-color: #ff4c4c;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tor-warning a {
+    color: #fff;
+    text-decoration: underline;
+}
