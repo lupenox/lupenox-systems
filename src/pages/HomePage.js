@@ -74,6 +74,10 @@ const HomePage = () => {
               <h3>💻 PC Performance Optimization</h3>
               <p>Speed up and secure your system for peak performance.</p>
             </div>
+            <div className="service-card">
+              <h3>🌐 Website Development & Deployment</h3>
+              <p>We build, optimize, and deploy websites for maximum performance and reach.</p>
+            </div>
           </div>
         </section>
 

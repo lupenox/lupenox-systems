@@ -28,6 +28,7 @@ html, body {
 @media (max-width: 480px) {
     .service-card {
         padding: 16px;
+        margin: 10px auto;
     }
 }
 
@@ -35,7 +36,7 @@ html, body {
     width: 90%; 
     max-width: 400px;
     padding: 20px;
-    margin: 10px 0;
+    margin: 10px auto;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: var(--card-bg-light);
@@ -163,4 +164,28 @@ body.dark-mode .services-preview h2 {
 .glowing-header {
     color: #0ff;
     text-shadow: none;
+}
+
+/* New Service Card */
+.service-card-new {
+    width: 90%; 
+    max-width: 400px;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: var(--card-bg-light);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    color: var(--text-color-light);
+}
+
+.service-card-new h3 {
+    color: var(--text-color-light);
+    font-weight: bold;
+}
+
+.service-card-new p {
+    color: var(--text-body-light);
 }
