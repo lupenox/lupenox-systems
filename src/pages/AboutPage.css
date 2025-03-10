@@ -4,6 +4,8 @@
     color: #ccc;
     font-family: "Orbitron", sans-serif;
     padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
 }
 
 /* 🌟 Section Styling */
@@ -22,7 +24,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: url('/home/logan-lapierre/Desktop/Current_Git_projects/lupenox-systems/src/assets/images/Cyber_Grid.webp') repeat;
+    background: url('../assets/images/Cyber_Grid.webp') repeat;
     opacity: 0.1;
     z-index: 0;
 }
