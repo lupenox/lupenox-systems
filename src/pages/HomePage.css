@@ -112,7 +112,7 @@ body.dark-mode .services-preview h2 {
     margin: 0 auto;
 }
 
-/* 🛡️ About Section */
+/* 🅡️ About Section */
 .about-section {
     text-align: center;
     padding: 50px;
@@ -162,5 +162,5 @@ body.dark-mode .services-preview h2 {
 
 .glowing-header {
     color: #0ff;
-    text-shadow: none; /* Removed heavy glow for a cleaner look */
+    text-shadow: none;
 }
