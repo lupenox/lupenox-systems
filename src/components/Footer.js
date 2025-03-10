@@ -12,10 +12,10 @@ const Footer = () => {
           <a href="https://github.com/lupenox" target="_blank" rel="noopener noreferrer" className="text-light mx-2">
             <FaGithub size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/lupenox" target="_blank" rel="noopener noreferrer" className="text-light mx-2">
+          <a href="https://www.linkedin.com/in/logan-lapierre-555348354" target="_blank" rel="noopener noreferrer" className="text-light mx-2">
             <FaLinkedin size={24} />
           </a>
-          <a href="mailto:logan@example.com" className="text-light mx-2">
+          <a href="mailto:logan.lupenox@gmail.com" className="text-light mx-2">
             <FaEnvelope size={24} />
           </a>
         </div>
