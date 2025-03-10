@@ -105,15 +105,6 @@ body.dark-mode .services-preview h2 {
     border-bottom: 2px solid rgba(0, 188, 212, 0.8);
 }
 
-.service-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 /* 🅡️ About Section */
 .about-section {
     text-align: center;
@@ -167,9 +158,18 @@ body.dark-mode .services-preview h2 {
     text-shadow: none;
 }
 
-/* New Service Card */
-.service-card-new {
-    width: 100%; 
+.service-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-card, .service-card-new {
+    width: 100%;
     max-width: 400px;
     padding: 20px;
     margin: 10px auto;
