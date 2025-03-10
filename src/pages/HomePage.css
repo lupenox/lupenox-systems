@@ -1,3 +1,13 @@
+/* 🌟 CSS Variables for Light/Dark Mode */
+:root {
+    --card-bg-light: rgba(255, 255, 255, 0.9);
+    --card-bg-dark: rgba(40, 40, 40, 0.9);
+    --text-color-light: #222;
+    --text-color-dark: #ddd;
+    --text-body-light: #444;
+    --text-body-dark: #aaa;
+}
+
 /* 🌟 General Page Styling */
 .homepage-container {
     font-family: "Orbitron", sans-serif;
@@ -22,23 +32,55 @@ html, body {
 }
 
 .service-card {
-    width: 90%; /* Better fit for mobile */
+    width: 90%; 
     max-width: 400px;
     padding: 20px;
     margin: 10px 0;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--card-bg-light);
     border: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.2s ease-in-out;
+    color: var(--text-color-light);
 }
 
-/* Center the header in services-preview */
+.service-card h3 {
+    color: var(--text-color-light);
+    font-weight: bold;
+}
+
+.service-card p {
+    color: var(--text-body-light);
+}
+
+/* 🌙 Dark Mode Styles */
+body.dark-mode .service-card {
+    background: var(--card-bg-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .service-card h3 {
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .service-card p {
+    color: var(--text-body-dark);
+}
+
+/* Clean Header Style for "Our Services" */
 .services-preview h2 {
     text-align: center;
-    color: black;
+    color: #333;
     margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Dark Mode Header Style */
+body.dark-mode .services-preview h2 {
+    color: #ccc;
 }
 
 /* Hover effect for a more interactive feel */
@@ -49,7 +91,7 @@ html, body {
 
 .home-banner {
     background-size: cover;
-    background-position: 50% 80%; /* Default center */
+    background-position: 50% 80%;
     background-repeat: no-repeat;
     width: 100%;
     height: 300px;
@@ -61,17 +103,14 @@ html, body {
     border-bottom: 2px solid rgba(0, 188, 212, 0.8);
 }
 
-
-
 .service-grid {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    max-width: 900px;  /* ✅ Keeps them centered and prevents full-width stretching */
-    margin: 0 auto; /* ✅ Ensures it's centered */
+    max-width: 900px;
+    margin: 0 auto;
 }
-
 
 /* 🛡️ About Section */
 .about-section {
@@ -88,7 +127,6 @@ html, body {
     align-items: center;
 }
 
-
 /* 🚀 Call to Action */
 .cta-section {
     text-align: center;
@@ -99,36 +137,30 @@ html, body {
 
 /* 🦾 Footer Fix */
 .footer {
-    margin-top: auto; /* Pushes it to the bottom naturally */
+    margin-top: auto;
     padding: 20px 0;
     background: #222;
 }
 
 .typewriter-text {
-    font-size: 2.5rem; /* Increase size for more impact */
-    font-weight: 800; /* Make it bolder */
-    letter-spacing: 1.5px; /* Slight spacing for futuristic feel */
-    color: #ffffff; /* Pure white for max contrast */
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #ffffff;
     text-shadow: 
         0 0 12px rgba(0, 255, 255, 0.9), 
         0 0 20px rgba(0, 255, 255, 0.6), 
-        0 0 30px rgba(0, 255, 255, 0.4); /* Stronger neon glow */
+        0 0 30px rgba(0, 255, 255, 0.4);
 }
 
 .typewriter-text-container {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    background: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 8px;
     backdrop-filter: blur(5px);
 }
 
-.typewriter-text {
-    font-size: 2rem; /* Bigger text */
-    font-weight: bold;
-    letter-spacing: 1px; /* Make it look more futuristic */
-}
-
 .glowing-header {
-    color: #0ff; /* Bright cyan for contrast */
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.5);
+    color: #0ff;
+    text-shadow: none; /* Removed heavy glow for a cleaner look */
 }
