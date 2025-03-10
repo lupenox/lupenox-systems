@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
-import "./HomePage.css"; 
-import homeBanner from "../assets/images/last_banner.webp"; // ✅ Import the image
+import "./HomePage.css";
+import homeBanner from "../assets/images/last_banner.webp";
 
 const HomePage = () => {
-  // 🛠 Scroll Animation for Sections
   useEffect(() => {
     const handleScroll = () => {
       document.querySelectorAll("section").forEach((section) => {
@@ -16,49 +15,45 @@ const HomePage = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Run once on load
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="homepage-container">
       <main>
-        {/* 🔥 Hero Banner Section */}
         <section
           className="home-banner"
           style={{ backgroundImage: `url(${homeBanner})` }}
->
-            <div className="typewriter-text-container">
-              <h1 className="typewriter-text">
-                 <Typewriter
-                  options={{
+        >
+          <div className="typewriter-text-container">
+            <h1 className="typewriter-text">
+              <Typewriter
+                options={{
                   strings: [
-            "Welcome to Lupenox Systems",
-            "Cybersecurity & AI Innovation",
-            "Building a Safer Digital World",
+                    "Welcome to Lupenox Systems",
+                    "Cybersecurity & AI Innovation",
+                    "Building a Safer Digital World",
                   ],
-          autoStart: true,
-          loop: true,
-          delay: 75,
-          deleteSpeed: 50,
-        }}
-      />
-    </h1>
-  </div>
-</section>
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                  deleteSpeed: 50,
+                }}
+              />
+            </h1>
+          </div>
+        </section>
 
-
-        {/* 🛡️ About Section */}
         <section className="about-section">
           <h2>About Lupenox Systems</h2>
           <p>
-            At Lupenox Systems, we specialize in cutting-edge <strong>cybersecurity</strong> & <strong>AI solutions </strong> 
-            to safeguard your data and optimize your digital presence. From penetration testing to AI-driven security automation, 
+            At Lupenox Systems, we specialize in cutting-edge <strong>cybersecurity</strong> & <strong>AI solutions</strong>
+            to safeguard your data and optimize your digital presence. From penetration testing to AI-driven security automation,
             we ensure that businesses and individuals stay protected in an evolving digital landscape.
           </p>
         </section>
 
-        {/* ⚙️ Services Preview Section */}
         <section className="services-preview">
           <h2 className="glowing-header">Our Services</h2>
           <div className="service-grid">
@@ -78,10 +73,17 @@ const HomePage = () => {
               <h3>🌐 Website Development & Deployment</h3>
               <p>We build, optimize, and deploy websites for maximum performance and reach.</p>
             </div>
+            <div className="service-card">
+              <h3>🛡️ Penetration Testing</h3>
+              <p>Identify and address vulnerabilities with our advanced penetration testing services.</p>
+            </div>
+            <div className="service-card">
+              <h3>☁️ Cloud Infrastructure Setup</h3>
+              <p>Design and deploy scalable cloud infrastructure tailored to your business needs.</p>
+            </div>
           </div>
         </section>
 
-        {/* 🚀 Call to Action Section */}
         <section className="cta-section">
           <h2>Ready to Secure Your Digital World?</h2>
           <p>Contact us today for expert cybersecurity and AI-driven solutions.</p>

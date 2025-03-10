@@ -25,12 +25,9 @@ html, body {
 }
 
 .service-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
@@ -38,11 +35,8 @@ html, body {
     box-sizing: border-box;
 }
 
-.service-card, .service-card-new {
-    width: 100%;
-    max-width: 400px;
+.service-card {
     padding: 20px;
-    margin: 10px 0;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: var(--card-bg-light);
@@ -53,31 +47,29 @@ html, body {
     box-sizing: border-box;
 }
 
-.service-card:hover, .service-card-new:hover {
+.service-card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 480px) {
-    .service-card, .service-card-new {
-        width: calc(100% - 20px);
-    }
-}
-
-body.dark-mode .service-card, body.dark-mode .service-card-new {
+body.dark-mode .service-card {
     background: var(--card-bg-dark);
     color: var(--text-color-dark);
 }
 
-body.dark-mode .service-card h3, body.dark-mode .service-card-new h3 {
+body.dark-mode .service-card h3 {
     color: var(--text-color-dark);
 }
 
-body.dark-mode .service-card p, body.dark-mode .service-card-new p {
+body.dark-mode .service-card p {
     color: var(--text-body-dark);
 }
 
-.service-card-new p {
+.service-card h3 {
+    font-weight: bold;
+}
+
+.service-card p {
     color: var(--text-body-light);
 }
 
@@ -116,10 +108,7 @@ body.dark-mode .services-preview h2 {
     font-weight: 800;
     letter-spacing: 1.5px;
     color: #ffffff;
-    text-shadow: 
-        0 0 12px rgba(0, 255, 255, 0.9), 
-        0 0 20px rgba(0, 255, 255, 0.6), 
-        0 0 30px rgba(0, 255, 255, 0.4);
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.9), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
 }
 
 .typewriter-text-container {
