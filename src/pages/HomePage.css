@@ -14,16 +14,37 @@ html, body {
     overflow-x: hidden;
 }
 
-.service-card {
-    background: rgba(255, 255, 255, 0.9); /* Slightly darker for contrast */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds depth */
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border to stand out */
-    color: black;
+/* Responsive adjustment for smaller devices */
+@media (max-width: 480px) {
+    .service-card {
+        padding: 16px;
+    }
 }
 
+.service-card {
+    width: 90%; /* Better fit for mobile */
+    max-width: 400px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Center the header in services-preview */
 .services-preview h2 {
-    padding-bottom: 20px;
+    text-align: center;
     color: black;
+    margin-bottom: 30px;
+}
+
+* Hover effect for a more interactive feel */
+.service-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .home-banner {
