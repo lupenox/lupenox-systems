@@ -11,7 +11,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
 
   const toggleVersion = () => {
     const onionURL = "http://plfxe3vmvztzm2ngkiqzup3hlaqig25ln6wc2mdysdf3jcnhotvsanqd.onion";
-    const clearnetURL = "https://your-clearnet-domain.com";
+    const clearnetURL = "https://www.lupenoxsystems.com/";
 
     if (isOnion) {
       window.location.href = clearnetURL; // Switch to clearnet
