@@ -1,118 +1,94 @@
-/* 🌑 General Styling */
+/* 🌌 General Page Styling */
 .about-container {
-    text-align: center;
+    background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
     color: #ccc;
-    background: #111;
-    padding-bottom: 50px;
     font-family: "Orbitron", sans-serif;
+    padding-bottom: 50px;
 }
 
-/* 🎓 Education Section */
-.education-section {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
-    margin: 50px auto;
-    width: 80%;
-    max-width: 900px;
-}
-
-.education-section h3 {
-    margin-top: 20px;
-    font-size: 1.3rem;
-    color: #00bcd4;
-}
-
-.education-list, .course-list {
-    list-style: none;
-    padding: 0;
-}
-
-.education-list li, .course-list li {
-    font-size: 1.1rem;
-    margin: 10px 0;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 12px;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-.education-list li:hover, .course-list li:hover {
-    background: rgba(0, 188, 212, 0.3);
-}
-
-/* 📖 Services Section */
-.services-section {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
-    margin: 50px auto;
-    width: 80%;
-    max-width: 900px;
-}
-
-/* 🚀 Call to Action */
-.cta-section {
+/* 🌟 Section Styling */
+.intro-section, .fun-section, .meet-section, .music-section {
     text-align: center;
     padding: 50px;
-    background: #343a40;
-    color: white;
+    position: relative;
+    z-index: 1;
 }
 
-.cta-btn {
-    background: #00bcd4;
-    color: white;
-    padding: 12px 24px;
+/* 🌟 Cyberpunk Background Grid */
+.about-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('/home/logan-lapierre/Desktop/Current_Git_projects/lupenox-systems/src/assets/images/Cyber_Grid.webp') repeat;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+/* 🧑‍💻 Profile Image with Glow */
+.profile-image {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    margin: 20px auto;
+    display: block;
+}
+
+/* 🦉 Fun Image Glow */
+.fun-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
+    margin: 20px auto;
+    display: block;
+}
+
+/* 🚀 Headings with Neon Glow */
+h2 {
+    color: #0ff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* 🔥 Music Section Glow */
+.music-section iframe {
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* 🚨 CTA Button Glow */
+.cta-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
 }
 
-.cta-btn:hover {
-    background: #008ba3;
-    box-shadow: 0 0 25px rgba(0, 255, 212, 1);
-    transform: scale(1.05);
+.cta-button:hover {
+    background-color: #008c9e;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 1);
 }
 
-/* Ensure the services section is centered */
-.services-section {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
-    margin: 50px auto;
-    width: 80%;
-    max-width: 900px;
-    text-align: center; /* Center heading and text */
+/* 🌐 Text Paragraph Styling */
+p {
+    color: #aaa;
+    line-height: 1.6;
 }
 
-/* Center the grid and cards */
-.services-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 900px; /* Prevents full-width stretching */
-    margin: 0 auto; /* Centers the grid */
-}
-
-/* Ensure each service card is centered properly */
-.service-card {
+/* 🌑 Dark Background for CTA */
+.cta-section {
+    padding: 50px;
+    text-align: center;
     background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    max-width: 300px; /* Adjust for better proportion */
-    text-align: center; /* Ensure text inside is centered */
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 188, 212, 0.8);
+    color: white;
 }
