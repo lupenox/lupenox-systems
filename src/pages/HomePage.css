@@ -29,11 +29,12 @@ html, body {
     .service-card {
         padding: 16px;
         margin: 10px auto;
+        width: 100%;
     }
 }
 
 .service-card {
-    width: 90%; 
+    width: 100%; 
     max-width: 400px;
     padding: 20px;
     margin: 10px auto;
@@ -168,7 +169,7 @@ body.dark-mode .services-preview h2 {
 
 /* New Service Card */
 .service-card-new {
-    width: 90%; 
+    width: 100%; 
     max-width: 400px;
     padding: 20px;
     margin: 10px auto;
