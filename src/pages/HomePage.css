@@ -24,14 +24,6 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Responsive adjustment for smaller devices */
-@media (max-width: 480px) {
-    .service-card {
-        padding: 16px;
-        margin: 10px auto;
-        width: 100%;
-    }
-}
 
 .service-card {
     width: 100%; 
@@ -162,14 +154,16 @@ body.dark-mode .services-preview h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    width: 100%;
     max-width: 900px;
     margin: 0 auto;
 }
 
 .service-card, .service-card-new {
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 400px;
     padding: 20px;
     margin: 10px auto;
@@ -180,13 +174,16 @@ body.dark-mode .services-preview h2 {
     text-align: center;
     transition: transform 0.2s ease-in-out;
     color: var(--text-color-light);
+    box-sizing: border-box;
 }
 
-.service-card-new h3 {
-    color: var(--text-color-light);
-    font-weight: bold;
+@media (max-width: 480px) {
+    .service-card, .service-card-new {
+        width: calc(100% - 20px);
+    }
 }
 
 .service-card-new p {
     color: var(--text-body-light);
 }
+
