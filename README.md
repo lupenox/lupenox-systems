@@ -1,52 +1,63 @@
-# Lupenox Systems 🌐🕵️‍♂️
+Lupenox Systems 🌐🕵️‍♂️
 
-**Lupenox Systems** is a cutting-edge platform offering AI-driven smart home and web solutions for a futuristic, secure experience. This project also includes a Tor hidden service for privacy-first browsing.
+Lupenox Systems is a privacy-first platform offering AI-driven smart home and web solutions. This project is designed with security, efficiency, and user-centric customization in mind. It also includes a Tor hidden service for anonymous and private browsing.
+🌐 Live Site
 
----
+    Clearnet: www.lupenoxsystems.com (Hosted on Vercel)
+    .onion: plfxe3vmvztzm2ngkiqzup3hlaqig25ln6wc2mdysdf3jcnhotvsanqd.onion (Hosted on Oracle Cloud)
 
-## 🌐 Live Site
+⚠️ The .onion site is accessible only through the Tor Browser.
 
-- **Clearnet:** [https://www.lupenoxsystems.com](https://www.lupenoxsystems.com) *(Hosted on Vercel)*  
-- **.onion:** `plfxe3vmvztzm2ngkiqzup3hlaqig25ln6wc2mdysdf3jcnhotvsanqd.onion` *(Hosted on Oracle Cloud)*
+⚙️ Features
 
-> ⚠️ The `.onion` site is accessible only through the [Tor Browser](https://www.torproject.org/).
+    🔒 Privacy-focused: Hosted as a Tor hidden service.
+    🌙 Dark Mode: Seamless dark/light mode toggle.
+    🔄 .onion & Clearnet Switch: Users can easily switch between the clearnet and .onion version.
+    💻 Responsive Design: Optimized for desktop and mobile.
+    ⚡ Fast & Lightweight: Built with React and served with Nginx.
+    ☁️ Always Available: .onion version hosted on Oracle Cloud for continuous uptime.
+    🔧 Custom Configuration: Manual adjustments in .json config files and deployment settings for optimal performance.
 
----
+🚀 Tech Stack
 
-## ⚙️ Features
-
-- 🔒 **Privacy-focused**: Hosted as a Tor hidden service.  
-- 🌙 **Dark Mode**: Seamless dark/light mode toggle.  
-- 🕵️‍♂️ **.onion & Clearnet Switch**: Users can easily switch between the clearnet and `.onion` version.  
-- 💻 **Responsive Design**: Optimized for desktop and mobile.  
-- ⚡ **Fast & Lightweight**: Built with React and served with Nginx.  
-- ☁️ **Always Available**: The `.onion` site is hosted on Oracle Cloud, ensuring it stays online even if the local PC is turned off.
-
----
-
-## 🚀 Tech Stack
-
-- **Frontend:** React, CSS, Bootstrap  
-- **Backend:** Nginx (for static file hosting)  
-- **Security:** Tor Hidden Service, Oracle Cloud Infrastructure  
-- **Hosting:** 
-  - **Clearnet:** Vercel  
-  - **.onion:** Oracle Cloud Always Free Tier  
-
----
+    Frontend: React, CSS, Bootstrap, HTML, JavaScript
+    Backend: Nginx (for static file hosting)
+    Config & Scripting: JSON, Nano (for Linux-based file editing), Bash, Zsh
+    Security: Tor Hidden Service, Oracle Cloud Infrastructure
+    Deployment:
+        Clearnet: Vercel
+        .onion: Oracle Cloud Always Free Tier
 
 📦 Deployment Instructions
+Clearnet Deployment (Vercel)
 
-    Clearnet Deployment (Vercel):
-        Link the repository to Vercel.
-        Set the build command to npm run build.
-        Set the output directory to build.
+    Link the repository to Vercel.
+    Set the build command to npm run build.
+    Set the output directory to build.
 
-    .onion Deployment (Oracle Cloud):
-        Use Nginx to serve the static files from the build directory.
-        Ensure the Tor service is properly configured to expose the .onion domain.
+.onion Deployment (Oracle Cloud)
 
----
+    Use Nginx to serve the static files from the build directory.
+    Configure the Tor service to expose the .onion domain.
+
+🛠️ Setup & Local Development
+
+    Clone the Repository
+
+git clone https://github.com/0xlapiere3/lupenox-systems.git
+cd lupenox-systems
+
+    Install Dependencies
+
+npm install
+
+    Run Development Server
+
+npm start
+
+    Build for Production
+
+npm run build
 
 🤝 Acknowledgments
 
@@ -54,10 +65,3 @@
     Oracle Cloud for hosting the .onion site.
     Vercel for seamless clearnet deployment.
     Bootstrap for responsive design.
-
-## 🛠️ Setup & Deployment
-
-### Clone the Repository  
-```bash
-git clone https://github.com/0xlapiere3/lupenox-systems.git
-cd lupenox-systems
