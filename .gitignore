@@ -1,5 +1,27 @@
-.vercel
-node_modules
+# dependencies
 node_modules/
-.cache/node_modules/
-.cache/
+
+# production builds
+dist/
+build/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# environment variables
+.env
+.env.local
+.env.*.local
+
+# OS stuff
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+
+# misc
+*.log
