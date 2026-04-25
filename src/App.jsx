@@ -1,7 +1,11 @@
+import HomePage from "./pages/Home";
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
     <div>
-      <h1>Logan’s New Website</h1>
+      <Navbar />
+      <HomePage />
     </div>
   );
 }

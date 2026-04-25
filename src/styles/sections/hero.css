@@ -1,0 +1,33 @@
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  margin-top: 0.5rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
