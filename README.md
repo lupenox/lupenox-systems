@@ -52,11 +52,5 @@ npm run build
 ```
 
 ## Author
-
-Logan Lapierre  
-UWM Computer Science Student  
-DevOps / Linux / Infrastructure Focused
-
-Logan Lapierre  
 UWM Computer Science Student  
 DevOps / Linux / Infrastructure Focused
