@@ -1,16 +1,62 @@
-# React + Vite
+# Lupenox Systems
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Logan Lapierre.
 
-Currently, two official plugins are available:
+Built with React + Vite and focused on showcasing projects related to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- DevOps & Linux
+- Automation & Scripting
+- Local AI & LLM Workflows
+- Backend Development
+- Infrastructure & CI/CD
+- Debugging & Systems Engineering
 
-## React Compiler
+## Live Website
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://www.lupenoxsystems.com
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript
+- CSS
+- Vercel
+
+## Featured Projects
+
+- Local AI Chatbot
+- Gamepad2Mouse
+- Terminal Diagnostics
+- Bash Guardian AI
+- Campus Resource Navigator (CRN)
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run locally:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Author
+
+Logan Lapierre  
+UWM Computer Science Student  
+DevOps / Linux / Infrastructure Focused
+
+Logan Lapierre  
+UWM Computer Science Student  
+DevOps / Linux / Infrastructure Focused
