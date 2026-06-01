@@ -7,13 +7,15 @@ function Hero() {
     <section className="hero-section">
       <div className="hero-bg">
         <VeilBG />
-    </div>
+      </div>
 
-    <div className="container hero-content">
-      <h1 className="hero-title">Logan Lapierre</h1>
-      <p className="hero-subtitle">DevOps • Linux • Automation</p>
-   </div>
-</section>
+      <div className="container hero-content">
+        <h1 className="hero-title">Logan Lapierre</h1>
+        <p className="hero-subtitle">
+          Computer Science Student • AI Systems • DevOps • Linux
+        </p>
+      </div>
+    </section>
   );
 }
 
