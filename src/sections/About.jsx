@@ -11,25 +11,23 @@ function About() {
         </div>
 
         <div className="about-content glass-card">
-          <p className="about-tag">Computer Science • DevOps Focused</p>
-          <h2 className="section-title">I build practical AI systems with production instincts.</h2>
+          <p className="about-tag">Computer Science • Linux • Automation</p>
+          <h2 className="section-title">I’m happiest when software makes annoying work disappear.</h2>
           <div className="text">
             <p>
-              I’m Logan Lapierre, a senior Computer Science student at the
-              University of Wisconsin–Milwaukee graduating in December 2026.
-              My sweet spot is where agentic AI meets Linux, automation,
-              infrastructure, and developer workflows.
+              I’m Logan, a Computer Science student at UW–Milwaukee graduating
+              in December 2026. I’m drawn to the overlap between AI, Linux,
+              infrastructure, and the developer tools people actually use every day.
             </p>
             <p>
-              I’m focused on building tools that feel useful: local LLM apps,
-              shell assistants, CI/CD experiments, diagnostics utilities, and
-              workflow automations that reduce manual effort and make systems
-              easier to debug.
+              Most of my projects start with some kind of friction: a repetitive
+              workflow, a confusing system issue, a tool that needs better feedback,
+              or an idea that would be way cooler if it ran locally and felt fast.
             </p>
             <p>
-              I’m pursuing roles in DevOps, SRE, Linux systems, cloud support,
-              backend engineering, and AI automation where curiosity, reliability,
-              and fast iteration matter.
+              I’m looking for roles where I can build, debug, automate, and keep
+              learning around AI systems, DevOps, SRE, backend engineering, Linux,
+              cloud support, or infrastructure tooling.
             </p>
           </div>
         </div>
