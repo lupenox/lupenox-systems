@@ -75,6 +75,50 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 ::selection { background: rgba(56, 189, 248, 0.35); color: white; }
 
+/* Glassmorphic Keyblade Border */
+.glass-keyblade {
+  position: relative;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 0 40px rgba(167, 139, 250, 0.4);
+  overflow: hidden;
+}
+
+.glass-keyblade::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(45deg, 
+    #a5b4fc, #c4b5fd, #e0bbff, #a5b4fc);
+  background-size: 300% 300%;
+  animation: keyblade-rotate 8s linear infinite;
+  z-index: -1;
+  filter: blur(12px);
+  opacity: 0.85;
+  border-radius: 18px;
+}
+
+.glass-keyblade::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(165, 243, 252, 0.25) 0%, transparent 70%);
+  animation: keyblade-pulse 6s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes keyblade-rotate {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+@keyframes keyblade-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
