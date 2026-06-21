@@ -67,11 +67,12 @@ function Skills() {
   return (
     <section id="skills" className="skills-section">
       <div className="skills-container">
-        <p className="section-kicker">Technical stack</p>
-        <h2 className="section-title">Skills recruiters can scan in seconds.</h2>
+        <p className="section-kicker">What I work with</p>
+        <h2 className="section-title">The tools I keep reaching for.</h2>
         <p className="section-subtitle skills-subtitle">
-          Technologies and tools I’ve used across automation, backend
-          development, infrastructure, testing, debugging, and local AI projects.
+          A mix of languages, frameworks, infrastructure tools, and AI stack pieces
+          I’ve used while building projects, debugging systems, and automating the
+          parts of development that get repetitive fast.
         </p>
 
         <div className="skills-grid">
