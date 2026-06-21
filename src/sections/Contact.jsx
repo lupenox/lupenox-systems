@@ -5,9 +5,10 @@ function Contact() {
     <section id="contact" className="contact-section">
       <div className="contact-container">
 
-        <h2>Contact</h2>
+        <p className="section-kicker">Let's connect</p>
+        <h2 className="section-title">Ready to talk AI, DevOps, or infrastructure.</h2>
 
-        <p className="contact-subtitle">
+        <p className="section-subtitle contact-subtitle">
           Connect with me through GitHub, LinkedIn, Handshake, or email.
         </p>
 
@@ -17,7 +18,7 @@ function Contact() {
             href="https://github.com/lupenox"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-card"
+            className="contact-card glass-card"
           >
             <h3>GitHub</h3>
 
@@ -34,7 +35,7 @@ function Contact() {
             href="https://www.linkedin.com/in/logan-lapierre-555348354"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-card"
+            className="contact-card glass-card"
           >
             <h3>LinkedIn</h3>
 
@@ -51,7 +52,7 @@ function Contact() {
             href="https://uwm.joinhandshake.com/profiles/loganlapierre"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-card"
+            className="contact-card glass-card"
           >
             <h3>Handshake</h3>
 
@@ -66,7 +67,7 @@ function Contact() {
 
           <a
             href="mailto:logan.lupenox@gmail.com"
-            className="contact-card"
+            className="contact-card glass-card"
           >
             <h3>Email</h3>
 

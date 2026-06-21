@@ -3,59 +3,39 @@ import "../styles/sections/sections.css";
 import "../styles/sections/about.css";
 
 function About() {
-  
   return (
-<section id="about" className="about-section">
+    <section id="about" className="about-section">
+      <div className="about-container">
+        <div className="about-image glass-card">
+          <img src={profilePic} alt="Logan Lapierre" id="Me" />
+        </div>
 
-  <div className="about-container">
-
-    <div className="about-image">
-      <img src={profilePic} alt="Logan Lapierre" id="Me"/>
-    </div>
-
-    <div className="about-content">
-      <p className="about-tag">
-        COMPUTER SCIENCE STUDENT • DEVOPS FOCUSED
-      </p>
-
-      <h2>About Me</h2>
-
-      <div className="text"> 
-      <p>
-        Hello, I'm Logan Lapierre, a senior at the University of
-        Wisconsin–Milwaukee studying Computer Science.
-      </p>
-
-      <p>
-        My interests include Linux, DevOps, CI/CD, automation,
-        scripting, cloud technologies, and backend development.
-        I enjoy building tools and applications that improve
-        workflows, experimenting with AI-driven projects, and
-        modding video games.
-      </p>
-
-      <p>
-        I'm especially passionate about infrastructure-focused
-        engineering and enjoy solving technical problems,
-        debugging systems, and learning new technologies.
-        I'm currently pursuing opportunities in areas such as
-        DevOps, Site Reliability Engineering (SRE), Linux System
-        Administration, cloud support, and backend engineering.
-      </p>
-
-      <p>
-        I'm highly motivated, adaptable, and always looking for
-        opportunities to grow both technically and professionally.
-      </p>
+        <div className="about-content glass-card">
+          <p className="about-tag">Computer Science • DevOps Focused</p>
+          <h2 className="section-title">I build practical AI systems with production instincts.</h2>
+          <div className="text">
+            <p>
+              I’m Logan Lapierre, a senior Computer Science student at the
+              University of Wisconsin–Milwaukee graduating in December 2026.
+              My sweet spot is where agentic AI meets Linux, automation,
+              infrastructure, and developer workflows.
+            </p>
+            <p>
+              I’m focused on building tools that feel useful: local LLM apps,
+              shell assistants, CI/CD experiments, diagnostics utilities, and
+              workflow automations that reduce manual effort and make systems
+              easier to debug.
+            </p>
+            <p>
+              I’m pursuing roles in DevOps, SRE, Linux systems, cloud support,
+              backend engineering, and AI automation where curiosity, reliability,
+              and fast iteration matter.
+            </p>
+          </div>
+        </div>
       </div>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
   );
-
 }
 
 export default About;
