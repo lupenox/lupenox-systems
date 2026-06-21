@@ -1,6 +1,8 @@
 function ProjectDisplay({ project, featured = false }) {
+  const magicDensity = featured ? "magic-dense" : "magic-soft";
+
   return (
-    <article className={`project-card glass-card magic-border magic-starfield project-${project.accent} ${featured ? "project-featured" : ""}`}>
+    <article className={`project-card glass-card magic-border magic-starfield ${magicDensity} project-${project.accent} ${featured ? "project-featured" : ""}`}>
       {/* CSS-only mock screenshot keeps the portfolio fast while creating a premium visual hook. */}
       <div className="project-preview" aria-hidden="true">
         <div className="preview-toolbar"><span /><span /><span /></div>
