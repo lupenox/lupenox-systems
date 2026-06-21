@@ -11,26 +11,22 @@ function pick(items) {
   return items[Math.floor(Math.random() * items.length)];
 }
 
-function createParticle(width, height, source = "ambient", x = Math.random() * width, y = Math.random() * height) {
+function createParticle(width, height, x = Math.random() * width, y = Math.random() * height) {
   const isLight = Math.random() > 0.46;
-  const burst = source === "burst";
-  const life = burst ? randomBetween(58, 96) : randomBetween(240, 520);
+  const life = randomBetween(240, 520);
 
   return {
     kind: isLight ? "light" : "dark",
     x,
     y,
-    vx: burst ? randomBetween(-1.8, 1.8) : randomBetween(-0.22, 0.22),
-    vy: isLight
-      ? (burst ? randomBetween(-2.7, -0.55) : randomBetween(-0.55, -0.16))
-      : (burst ? randomBetween(0.45, 2.4) : randomBetween(0.2, 0.7)),
-    size: burst ? randomBetween(4.5, 12) : randomBetween(2.5, 8.5),
+    vx: randomBetween(-0.22, 0.22),
+    vy: isLight ? randomBetween(-0.55, -0.16) : randomBetween(0.2, 0.7),
+    size: randomBetween(2.5, 8.5),
     rotation: randomBetween(0, Math.PI * 2),
     spin: isLight ? randomBetween(-0.02, 0.02) : randomBetween(-0.045, 0.045),
-    opacity: burst ? randomBetween(0.62, 1) : randomBetween(0.22, 0.62),
+    opacity: randomBetween(0.22, 0.62),
     life,
     color: isLight ? pick(LIGHT_COLORS) : pick(DARK_COLORS),
-    source,
   };
 }
 
@@ -93,13 +89,11 @@ export default function DualityParticles() {
     if (!canvas || !ctx) return undefined;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const finePointer = window.matchMedia("(pointer: fine)");
     if (reducedMotion.matches) return undefined;
 
     let width = 0;
     let height = 0;
     let animationFrame = 0;
-    let lastMove = 0;
     const particles = [];
 
     const resize = () => {
@@ -111,30 +105,10 @@ export default function DualityParticles() {
       canvas.height = Math.floor(height * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      const targetCount = Math.min(72, Math.max(34, Math.floor(width / 18)));
+      const targetCount = Math.min(60, Math.max(28, Math.floor(width / 24)));
       while (particles.length < targetCount) particles.push(createParticle(width, height));
       while (particles.length > targetCount) particles.pop();
     };
-
-    const addBurst = (clientX, clientY) => {
-      if (!finePointer.matches) return;
-
-      const now = performance.now();
-      if (now - lastMove < 34) return;
-      lastMove = now;
-
-      const rect = canvas.getBoundingClientRect();
-      const x = clientX - rect.left;
-      const y = clientY - rect.top;
-
-      if (x < 0 || y < 0 || x > rect.width || y > rect.height) return;
-
-      for (let i = 0; i < 5; i += 1) {
-        particles.push(createParticle(width, height, "burst", x, y));
-      }
-    };
-
-    const handlePointerMove = (event) => addBurst(event.clientX, event.clientY);
 
     const update = () => {
       ctx.clearRect(0, 0, width, height);
@@ -145,22 +119,13 @@ export default function DualityParticles() {
         particle.y += particle.vy;
         particle.rotation += particle.spin;
         particle.life -= 1;
-
-        if (particle.source === "burst") {
-          particle.opacity *= 0.975;
-          particle.vx *= 0.985;
-          particle.vy *= 0.985;
-        } else {
-          particle.opacity = Math.max(0.18, particle.opacity + Math.sin(particle.life * 0.04) * 0.003);
-        }
+        particle.opacity = Math.max(0.18, particle.opacity + Math.sin(particle.life * 0.04) * 0.003);
 
         const outOfBounds = particle.y < -40 || particle.y > height + 40 || particle.x < -40 || particle.x > width + 40;
         if (particle.life <= 0 || outOfBounds) {
           particles.splice(i, 1);
-          if (particle.source !== "burst") {
-            const spawnY = particle.kind === "light" ? height + 24 : -24;
-            particles.push(createParticle(width, height, "ambient", Math.random() * width, spawnY));
-          }
+          const spawnY = particle.kind === "light" ? height + 24 : -24;
+          particles.push(createParticle(width, height, Math.random() * width, spawnY));
           continue;
         }
 
@@ -175,12 +140,10 @@ export default function DualityParticles() {
     update();
 
     window.addEventListener("resize", resize);
-    window.addEventListener("pointermove", handlePointerMove, { passive: true });
 
     return () => {
       window.cancelAnimationFrame(animationFrame);
       window.removeEventListener("resize", resize);
-      window.removeEventListener("pointermove", handlePointerMove);
     };
   }, []);
 
