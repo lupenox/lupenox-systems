@@ -6,10 +6,10 @@ const projectList = [
   {
     id: 1,
     title: "Job Source Agent",
-    status: "Featured Agentic AI",
-    impact: "Automates opportunity discovery and application intelligence for tech roles.",
+    status: "Agentic AI",
+    impact: "Turns scattered job posts into clearer application targets.",
     description:
-      "An agent-style job research workflow that gathers role signals, extracts recruiter-relevant requirements, and turns noisy listings into actionable application targets.",
+      "A job research workflow that pulls useful signals out of listings, highlights role requirements, and helps turn noisy searches into a more focused application plan.",
     tech: ["Agentic AI", "Python", "Automation", "Data Extraction", "Workflow Design"],
     github: "https://github.com/lupenox/job-source-agent",
     demo: "#contact",
@@ -18,10 +18,10 @@ const projectList = [
   {
     id: 2,
     title: "LiveKit Mock Interview Agent",
-    status: "Featured Realtime AI",
-    impact: "Voice-first interview practice with realtime agent interaction.",
+    status: "Realtime AI",
+    impact: "Voice interview practice without the stiff script feeling.",
     description:
-      "A realtime mock interview agent concept built around conversational AI, low-latency voice workflows, structured feedback, and recruiter-style technical screening preparation.",
+      "A realtime mock interview agent built around low-latency voice interaction, structured stages, and practical feedback for technical screening practice.",
     tech: ["LiveKit", "Realtime AI", "Agents", "Voice UX", "JavaScript"],
     github: "https://github.com/lupenox/livekit-mock-interview-agent",
     demo: "#contact",
@@ -30,10 +30,10 @@ const projectList = [
   {
     id: 3,
     title: "Local AI Chatbot",
-    status: "Functional Prototype",
-    impact: "Offline desktop AI with model switching and local inference experiments.",
+    status: "Local AI Prototype",
+    impact: "Offline AI experiments with more privacy and control.",
     description:
-      "A local AI chatbot with a Flask backend, Hugging Face model support, dynamic model selection, and an Electron desktop interface for private AI workflows.",
+      "A local chatbot with a Flask backend, Hugging Face model support, model switching, and an Electron desktop interface for private AI workflows.",
     tech: ["Python", "Flask", "Transformers", "Electron", "Local LLMs"],
     github: "https://github.com/lupenox/local-ai-chatbot",
     accent: "blue",
@@ -41,10 +41,10 @@ const projectList = [
   {
     id: 4,
     title: "Bash Guardian AI",
-    status: "WIP AI Companion",
-    impact: "Linux-first assistant for safer terminal workflows and productivity.",
+    status: "Linux AI Tooling",
+    impact: "A Linux-first assistant for terminal workflows.",
     description:
-      "A personal AI companion focused on local AI tooling, conversational workflows, prompt engineering, shell assistance, and supportive productivity automation.",
+      "A personal AI companion focused on local tooling, shell help, prompt workflows, and making command-line work feel less chaotic.",
     tech: ["Python", "Linux", "Bash", "Prompt Engineering", "Local AI"],
     github: "https://github.com/lupenox/bash-guardian-ai",
     accent: "green",
@@ -53,9 +53,9 @@ const projectList = [
     id: 5,
     title: "Cloud API CI/CD Terraform",
     status: "DevOps Lab",
-    impact: "API delivery pipeline with infrastructure-as-code foundations.",
+    impact: "A deployment pipeline playground for backend and infra practice.",
     description:
-      "A DevOps-focused project exploring FastAPI deployment, automated testing, Docker support, CI/CD workflows, and Terraform infrastructure scaffolding.",
+      "A DevOps-focused project exploring FastAPI deployment, automated tests, Docker, CI/CD workflows, and Terraform infrastructure scaffolding.",
     tech: ["FastAPI", "Pytest", "Docker", "Terraform", "GitHub Actions"],
     github: "https://github.com/lupenox/cloud-api-cicd-terraform",
     accent: "pink",
@@ -64,9 +64,9 @@ const projectList = [
     id: 6,
     title: "Terminal Diagnostics",
     status: "Linux Utility",
-    impact: "Fast command-line visibility into system health for troubleshooting.",
+    impact: "Quick system visibility from the terminal.",
     description:
-      "A terminal-based Python diagnostic tool that reports system information, memory usage, disk usage, and mounted partitions for quick Linux troubleshooting.",
+      "A Python diagnostic tool that reports system information, memory usage, disk usage, and mounted partitions for faster Linux troubleshooting.",
     tech: ["Python", "Linux", "Diagnostics", "System Admin"],
     github: "https://github.com/lupenox/Terminal-Diagnostics",
     accent: "slate",
@@ -77,11 +77,12 @@ function Projects() {
   return (
     <section id="projects" className="projects-section">
       <div className="projects-container">
-        <p className="section-kicker">Proof of work</p>
-        <h2 className="section-title">Projects built for AI, automation, and infrastructure.</h2>
+        <p className="section-kicker">Stuff I’ve built</p>
+        <h2 className="section-title">Projects from the AI, Linux, and automation rabbit hole.</h2>
         <p className="section-subtitle projects-subtitle">
-          Recruiter-friendly snapshots of the strongest work: agentic workflows,
-          realtime AI, local LLM tooling, Linux automation, and DevOps delivery systems.
+          These are the projects that best show how I think: find a workflow,
+          make it less painful, wire up the system pieces, and keep iterating until
+          it feels useful.
         </p>
 
         <div className="projects-grid">
