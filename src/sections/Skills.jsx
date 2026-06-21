@@ -67,8 +67,9 @@ function Skills() {
   return (
     <section id="skills" className="skills-section">
       <div className="skills-container">
-        <h2 className="header">Skills</h2>
-        <p className="skills-subtitle">
+        <p className="section-kicker">Technical stack</p>
+        <h2 className="section-title">Skills recruiters can scan in seconds.</h2>
+        <p className="section-subtitle skills-subtitle">
           Technologies and tools I’ve used across automation, backend
           development, infrastructure, testing, debugging, and local AI projects.
         </p>

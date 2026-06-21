@@ -6,15 +6,16 @@ function Experience() {
     <section id="experience" className="experience-section">
       <div className="experience-container">
 
-        <h2>Experience</h2>
+        <p className="section-kicker">Background</p>
+        <h2 className="section-title">Education, credentials, and engineering signal.</h2>
 
-        <p className="experience-subtitle">
+        <p className="section-subtitle experience-subtitle">
           Education, certifications, open source contributions, and technical experience.
         </p>
 
         <div className="experience-grid">
 
-          <article className="experience-card">
+          <article className="experience-card glass-card">
             <div className="experience-card-header">
               <h3>University of Wisconsin–Milwaukee</h3>
 
@@ -72,7 +73,7 @@ function Experience() {
             </div>
           </article>
 
-          <article className="experience-card">
+          <article className="experience-card glass-card">
             <div className="experience-card-header">
               <h3>Technical Certifications</h3>
 
@@ -110,7 +111,7 @@ function Experience() {
           </a>
         </article>
 
-        <article className="experience-card">
+        <article className="experience-card glass-card">
           <div className="experience-card-header">
             <h3>Open Source Contribution</h3>
 
@@ -143,7 +144,7 @@ function Experience() {
           </a>
         </article>
 
-        <article className="experience-card">
+        <article className="experience-card glass-card">
           <div className="experience-card-header">
             <h3>Collaborative Engineering Projects</h3>
 
