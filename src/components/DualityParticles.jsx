@@ -14,6 +14,7 @@ function pick(items) {
 function createParticle(width, height, source = "ambient", x = Math.random() * width, y = Math.random() * height) {
   const isLight = Math.random() > 0.46;
   const burst = source === "burst";
+  const life = burst ? randomBetween(58, 96) : randomBetween(240, 520);
 
   return {
     kind: isLight ? "light" : "dark",
@@ -27,8 +28,7 @@ function createParticle(width, height, source = "ambient", x = Math.random() * w
     rotation: randomBetween(0, Math.PI * 2),
     spin: isLight ? randomBetween(-0.02, 0.02) : randomBetween(-0.045, 0.045),
     opacity: burst ? randomBetween(0.62, 1) : randomBetween(0.22, 0.62),
-    life: burst ? randomBetween(58, 96) : randomBetween(240, 520),
-    maxLife: burst ? randomBetween(58, 96) : randomBetween(240, 520),
+    life,
     color: isLight ? pick(LIGHT_COLORS) : pick(DARK_COLORS),
     source,
   };
@@ -134,6 +134,8 @@ export default function DualityParticles() {
       }
     };
 
+    const handlePointerMove = (event) => addBurst(event.clientX, event.clientY);
+
     const update = () => {
       ctx.clearRect(0, 0, width, height);
 
@@ -173,11 +175,12 @@ export default function DualityParticles() {
     update();
 
     window.addEventListener("resize", resize);
-    window.addEventListener("pointermove", (event) => addBurst(event.clientX, event.clientY), { passive: true });
+    window.addEventListener("pointermove", handlePointerMove, { passive: true });
 
     return () => {
       window.cancelAnimationFrame(animationFrame);
       window.removeEventListener("resize", resize);
+      window.removeEventListener("pointermove", handlePointerMove);
     };
   }, []);
 
