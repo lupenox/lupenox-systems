@@ -1,8 +1,6 @@
 function ProjectDisplay({ project, featured = false }) {
-  const magicDensity = featured ? "magic-dense" : "magic-soft";
-
   return (
-    <article className={`project-card glass-card magic-border magic-starfield ${magicDensity} project-${project.accent} ${featured ? "project-featured" : ""}`}>
+    <article className={`project-card glass-card project-${project.accent} ${featured ? "project-featured magic-border magic-soft" : ""}`}>
       {/* CSS-only mock screenshot keeps the portfolio fast while creating a premium visual hook. */}
       <div className="project-preview" aria-hidden="true">
         <div className="preview-toolbar"><span /><span /><span /></div>
@@ -14,7 +12,7 @@ function ProjectDisplay({ project, featured = false }) {
 
       <div className="project-card-header">
         <div>
-          <span className="project-status magic-pill">{project.status}</span>
+          <span className="project-status">{project.status}</span>
           <h3>{project.title}</h3>
         </div>
       </div>
@@ -24,7 +22,7 @@ function ProjectDisplay({ project, featured = false }) {
 
       <div className="project-tech-list">
         {project.tech.map((tech) => (
-          <span className="project-pill magic-pill" key={tech}>{tech}</span>
+          <span className="project-pill" key={tech}>{tech}</span>
         ))}
       </div>
 
