@@ -2,6 +2,7 @@ import profilePic from "../assets/profile-pic.jpg";
 import "../styles/sections/hero.css";
 import "../styles/sections/sections.css";
 import VeilBG from "../components/Animated_Background";
+import DualityParticles from "../components/DualityParticles";
 
 function Hero() {
   return (
@@ -9,6 +10,7 @@ function Hero() {
       <div className="hero-bg" aria-hidden="true">
         <VeilBG />
       </div>
+      <DualityParticles />
 
       <div className="container hero-shell glass-card">
         <div className="hero-copy">
