@@ -12,7 +12,7 @@ function Hero() {
       </div>
       <DualityParticles />
 
-      <div className="container hero-shell glass-card magic-border magic-starfield">
+      <div className="container hero-shell glass-card magic-border magic-starfield magic-dense">
         <div className="hero-copy">
           <p className="hero-eyebrow magic-pill">Open to 2026 internships and new-grad roles</p>
           <h1 className="hero-title">Logan Lapierre</h1>
