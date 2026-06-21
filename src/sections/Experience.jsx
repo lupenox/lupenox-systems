@@ -7,10 +7,10 @@ function Experience() {
       <div className="experience-container">
 
         <p className="section-kicker">Background</p>
-        <h2 className="section-title">Education, credentials, and engineering signal.</h2>
+        <h2 className="section-title">School, certs, open source, and the receipts.</h2>
 
         <p className="section-subtitle experience-subtitle">
-          Education, certifications, open source contributions, and technical experience.
+          A quick look at the classes, credentials, and project work behind the portfolio.
         </p>
 
         <div className="experience-grid">
@@ -25,9 +25,9 @@ function Experience() {
             </div>
 
             <p className="experience-description">
-              Coursework focused on systems programming, operating systems,
-              backend development, software engineering, cybersecurity,
-              algorithms, and infrastructure-focused computing.
+              My coursework has leaned into systems, backend development,
+              operating systems, security, algorithms, software engineering,
+              and the lower-level pieces that make infrastructure less mysterious.
             </p>
 
             <div className="experience-pill-list">
@@ -121,10 +121,10 @@ function Experience() {
           </div>
 
           <p className="experience-description">
-            Developed an experimental audio recording implementation for the
-            LMMS open-source digital audio workstation. Participated in pull
-            request discussions, collaborative development workflows, technical
-            review, and community feedback iteration.
+            I worked on an experimental audio recording implementation for
+            LMMS, an open-source digital audio workstation. It gave me real
+            practice with pull request discussion, technical review, feedback,
+            and the kind of collaboration that does not happen in a vacuum.
           </p>
 
           <div className="experience-pill-list">
@@ -154,11 +154,9 @@ function Experience() {
           </div>
 
           <p className="experience-description">
-            Worked on collaborative full-stack and infrastructure-focused
-            engineering projects involving React Native, Deno Deploy,
-            PostgreSQL/Neon databases, DevSecOps workflows, backend APIs,
-            machine learning experimentation, testing, debugging, and
-            AI-assisted development workflows.
+            I’ve also worked on team projects with React Native, Deno Deploy,
+            PostgreSQL/Neon, DevSecOps workflows, backend APIs, machine learning
+            experiments, testing, debugging, and AI-assisted development.
           </p>
 
           <div className="experience-pill-list">
@@ -194,7 +192,7 @@ function Experience() {
               rel="noopener noreferrer"
               className="experience-link"
             >
-              CRN Presentation Slides→
+              CRN Presentation Slides →
             </a>
 
             <a
