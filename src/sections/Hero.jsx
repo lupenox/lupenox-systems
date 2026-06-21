@@ -12,9 +12,9 @@ function Hero() {
       </div>
       <DualityParticles />
 
-      <div className="container hero-shell glass-card">
+      <div className="container hero-shell glass-card magic-border magic-starfield">
         <div className="hero-copy">
-          <p className="hero-eyebrow">Open to 2026 internships and new-grad roles</p>
+          <p className="hero-eyebrow magic-pill">Open to 2026 internships and new-grad roles</p>
           <h1 className="hero-title">Logan Lapierre</h1>
           <p className="hero-role">AI systems, Linux, and DevOps tooling.</p>
           <p className="hero-tagline">
@@ -24,21 +24,21 @@ function Hero() {
           </p>
 
           <div className="hero-cta-row" aria-label="Primary actions">
-            <a className="btn btn-primary" href="#projects">See what I’ve built</a>
-            <a className="btn btn-secondary" href="/logan-lapierre-cv.pdf">View CV</a>
-            <a className="btn btn-secondary" href="#contact">Contact me</a>
+            <a className="btn btn-primary magic-pill" href="#projects">See what I’ve built</a>
+            <a className="btn btn-secondary magic-pill" href="/logan-lapierre-cv.pdf">View CV</a>
+            <a className="btn btn-secondary magic-pill" href="#contact">Contact me</a>
           </div>
 
           <div className="hero-metrics" aria-label="Portfolio highlights">
-            <div>
+            <div className="magic-pill">
               <strong>Dec 2026</strong>
               <span>UWM CS graduate</span>
             </div>
-            <div>
+            <div className="magic-pill">
               <strong>AI + Infra</strong>
               <span>Where I keep ending up</span>
             </div>
-            <div>
+            <div className="magic-pill">
               <strong>Linux-first</strong>
               <span>Yes, I daily-drive it</span>
             </div>
@@ -49,7 +49,7 @@ function Hero() {
           <div className="orb orb-one" />
           <div className="orb orb-two" />
           <img src={profilePic} alt="Logan Lapierre" className="hero-photo" />
-          <div className="terminal-card glass-card">
+          <div className="terminal-card glass-card magic-pill">
             <span className="terminal-dot" />
             <code>$ ship useful-software --without-fluff</code>
           </div>
