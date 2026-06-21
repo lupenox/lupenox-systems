@@ -77,6 +77,14 @@
   isolation: isolate;
 }
 
+.magic-border {
+  --magic-outset: 34px;
+  --magic-horizontal-height: 96px;
+  --magic-vertical-width: 96px;
+  --magic-opacity: 0.48;
+  overflow: visible;
+}
+
 .magic-border > *,
 .magic-pill > * {
   position: relative;
@@ -90,87 +98,88 @@
   pointer-events: none;
   z-index: 1;
   background-repeat: no-repeat;
-  background-position: center;
   transition: opacity 240ms ease, filter 240ms ease, transform 240ms ease;
 }
 
 .magic-border::after {
-  inset: -26px;
+  inset: calc(var(--magic-outset) * -1);
   border-radius: inherit;
-  background-image: url("../assets/images/final_asset_05.png");
-  background-size: 100% 100%;
-  opacity: 0.34;
-  filter: drop-shadow(0 0 10px rgba(255, 234, 174, 0.36)) drop-shadow(0 0 18px rgba(125, 211, 252, 0.18));
+  background-image:
+    url("../assets/images/final_asset_16.png"),
+    url("../assets/images/final_asset_16.png"),
+    url("../assets/images/final_asset_03.png"),
+    url("../assets/images/final_asset_03.png");
+  background-position:
+    top center,
+    bottom center,
+    left center,
+    right center;
+  background-size:
+    calc(100% - var(--magic-vertical-width)) var(--magic-horizontal-height),
+    calc(100% - var(--magic-vertical-width)) var(--magic-horizontal-height),
+    var(--magic-vertical-width) calc(100% - var(--magic-horizontal-height)),
+    var(--magic-vertical-width) calc(100% - var(--magic-horizontal-height));
+  opacity: var(--magic-opacity);
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 12px rgba(255, 234, 174, 0.42)) drop-shadow(0 0 18px rgba(125, 211, 252, 0.18));
 }
 
 .magic-border:hover::after,
 .magic-border:focus-within::after {
-  opacity: 0.92;
-  filter: drop-shadow(0 0 16px rgba(255, 239, 184, 0.72)) drop-shadow(0 0 28px rgba(125, 211, 252, 0.32)) drop-shadow(0 0 34px rgba(167, 139, 250, 0.22));
-  transform: scale(1.01);
+  opacity: 0.96;
+  filter: drop-shadow(0 0 16px rgba(255, 239, 184, 0.78)) drop-shadow(0 0 28px rgba(125, 211, 252, 0.34)) drop-shadow(0 0 34px rgba(167, 139, 250, 0.24));
+  transform: scale(1.012);
 }
 
-.magic-border.magic-dense::after {
-  inset: -34px;
-  background-image: url("../assets/images/final_asset_01.png");
-  opacity: 0.42;
+.magic-border.magic-dense {
+  --magic-outset: 46px;
+  --magic-horizontal-height: 126px;
+  --magic-vertical-width: 126px;
+  --magic-opacity: 0.62;
 }
 
-.magic-border.magic-soft::after {
-  inset: -20px;
-  background-image: url("../assets/images/final_asset_06.png");
-  opacity: 0.24;
+.magic-border.magic-soft {
+  --magic-outset: 24px;
+  --magic-horizontal-height: 72px;
+  --magic-vertical-width: 72px;
+  --magic-opacity: 0.28;
 }
 
 .magic-border.magic-soft:hover::after,
 .magic-border.magic-soft:focus-within::after {
-  opacity: 0.74;
+  opacity: 0.72;
 }
 
 .magic-starfield::before {
-  content: "";
-  position: absolute;
-  inset: -18px;
-  border-radius: inherit;
-  pointer-events: none;
-  z-index: 1;
-  background-image: url("../assets/images/final_asset_51.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
-  opacity: 0;
-  mix-blend-mode: screen;
-  transition: opacity 240ms ease, filter 240ms ease, transform 240ms ease;
+  z-index: 0;
 }
 
-.magic-starfield:hover::before,
-.magic-starfield:focus-within::before {
-  opacity: 0.36;
-  filter: drop-shadow(0 0 14px rgba(255, 239, 184, 0.48));
-  transform: scale(1.01);
+.magic-pill {
+  position: relative;
+  overflow: visible;
 }
 
 .magic-pill::after {
-  inset: -12px -18px;
+  inset: -14px -20px;
   border-radius: inherit;
   background-image: url("../assets/images/final_asset_16.png");
+  background-position: center;
   background-size: 100% 100%;
-  opacity: 0.26;
+  opacity: 0.22;
   mix-blend-mode: screen;
   filter: drop-shadow(0 0 8px rgba(255,239,184,0.34));
 }
 
 .magic-pill:hover::after,
 .magic-pill:focus-visible::after {
-  opacity: 0.82;
+  opacity: 0.78;
   filter: drop-shadow(0 0 12px rgba(255,239,184,0.75)) drop-shadow(0 0 16px rgba(125,211,252,0.24));
   transform: scale(1.025);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .magic-border::after,
-  .magic-pill::after,
-  .magic-starfield::before {
+  .magic-pill::after {
     transition: none;
     transform: none !important;
   }
@@ -178,7 +187,6 @@
 
 @media (max-width: 760px) {
   .home-page > section { padding: 4.5rem 1rem; }
-  .magic-starfield::before { display: none; }
-  .magic-border::after { inset: -16px; opacity: 0.22; }
+  .magic-border::after { display: none; }
   .magic-pill::after { display: none; }
 }
