@@ -5,11 +5,12 @@ function Contact() {
     <section id="contact" className="contact-section">
       <div className="contact-container">
 
-        <p className="section-kicker">Let's connect</p>
-        <h2 className="section-title">Ready to talk AI, DevOps, or infrastructure.</h2>
+        <p className="section-kicker">Let’s connect</p>
+        <h2 className="section-title">Want to talk AI, Linux, DevOps, or weird useful tools?</h2>
 
         <p className="section-subtitle contact-subtitle">
-          Connect with me through GitHub, LinkedIn, Handshake, or email.
+          GitHub is best for code, LinkedIn is best for professional context, and
+          email is best if you want to reach me directly.
         </p>
 
         <div className="contact-grid">
@@ -23,7 +24,7 @@ function Contact() {
             <h3>GitHub</h3>
 
             <p>
-              View my projects, repositories, and open-source work.
+              Projects, experiments, and whatever I’m currently building or breaking.
             </p>
 
             <span className="contact-link">
@@ -40,7 +41,7 @@ function Contact() {
             <h3>LinkedIn</h3>
 
             <p>
-              Connect with me professionally and view my experience.
+              Professional background, certs, and the more normal version of me.
             </p>
 
             <span className="contact-link">
@@ -57,7 +58,7 @@ function Contact() {
             <h3>Handshake</h3>
 
             <p>
-              View my student and career profile through Handshake.
+              My student career profile for internships and university recruiting.
             </p>
 
             <span className="contact-link">
@@ -72,8 +73,7 @@ function Contact() {
             <h3>Email</h3>
 
             <p>
-              Reach out directly for opportunities, collaboration,
-              networking, or technical discussions.
+              The fastest way to reach me for roles, collaborations, or technical chats.
             </p>
 
             <span className="contact-link">
