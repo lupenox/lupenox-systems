@@ -10,35 +10,35 @@ function Hero() {
         <VeilBG />
       </div>
 
-      {/* Premium hero designed to communicate Logan's target role immediately. */}
       <div className="container hero-shell glass-card">
         <div className="hero-copy">
-          <p className="hero-eyebrow">Available for 2026 internships & new-grad pipelines</p>
+          <p className="hero-eyebrow">Open to 2026 internships and new-grad roles</p>
           <h1 className="hero-title">Logan Lapierre</h1>
-          <p className="hero-role">Agentic AI Engineer &amp; DevOps Specialist</p>
+          <p className="hero-role">AI systems, Linux, and DevOps tooling.</p>
           <p className="hero-tagline">
-            Senior CS student building recruiter-ready automation: local AI agents,
-            Linux tooling, CI/CD pipelines, and infrastructure systems that turn messy
-            workflows into reliable, observable software.
+            I like building practical software for messy real-world workflows:
+            local AI agents, terminal tools, automation scripts, CI/CD pipelines,
+            and infrastructure experiments that make debugging less painful.
           </p>
 
-          <div className="hero-cta-row">
-            <a className="btn btn-primary" href="#projects">View Projects</a>
-            <a className="btn btn-secondary" href="#contact">Contact</a>
+          <div className="hero-cta-row" aria-label="Primary actions">
+            <a className="btn btn-primary" href="#projects">See what I’ve built</a>
+            <a className="btn btn-secondary" href="/logan-lapierre-cv.pdf">View CV</a>
+            <a className="btn btn-secondary" href="#contact">Contact me</a>
           </div>
 
           <div className="hero-metrics" aria-label="Portfolio highlights">
             <div>
               <strong>Dec 2026</strong>
-              <span>UWM CS Graduate</span>
+              <span>UWM CS graduate</span>
             </div>
             <div>
               <strong>AI + Infra</strong>
-              <span>Agentic tooling focus</span>
+              <span>Where I keep ending up</span>
             </div>
             <div>
               <strong>Linux-first</strong>
-              <span>Automation mindset</span>
+              <span>Yes, I daily-drive it</span>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ function Hero() {
           <img src={profilePic} alt="Logan Lapierre" className="hero-photo" />
           <div className="terminal-card glass-card">
             <span className="terminal-dot" />
-            <code>$ ship agentic-ai --with devops</code>
+            <code>$ ship useful-software --without-fluff</code>
           </div>
         </div>
       </div>
