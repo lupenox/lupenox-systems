@@ -1,8 +1,9 @@
-.navbar { position: sticky; top: 0; width: 100%; background: rgba(3, 7, 18, 0.62); backdrop-filter: blur(18px) saturate(160%); -webkit-backdrop-filter: blur(18px) saturate(160%); border-bottom: 1px solid rgba(255,255,255,.1); z-index: 1000; }
+.navbar { position: sticky; top: 0; width: 100%; background: rgba(3, 7, 18, 0.72); backdrop-filter: blur(20px) saturate(165%); -webkit-backdrop-filter: blur(20px) saturate(165%); border-bottom: 1px solid rgba(255,255,255,.11); box-shadow: 0 16px 38px rgba(0,0,0,.2); z-index: 1000; }
 .navbar-inner { height: 66px; padding: 0 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; max-width: 1180px; margin: 0 auto; }
-.logo { flex-shrink: 0; color: white; font-weight: 950; letter-spacing: -.04em; }
+.logo { flex-shrink: 0; color: white; font-weight: 950; letter-spacing: -.04em; text-decoration: none; }
 .logo::after { content: ".ai"; color: var(--cyan); }
 .nav-links { display: flex; align-items: center; gap: .35rem; }
-.nav-links a { flex-shrink: 0; text-decoration: none; color: var(--text); font-size: .92rem; font-weight: 800; padding: .58rem .78rem; border-radius: 999px; transition: color .2s ease, background .2s ease; }
-.nav-links a:hover { color: white; background: rgba(255,255,255,.08); }
-@media (max-width: 800px) { .navbar { overflow-x: auto; } .navbar-inner { width: max-content; min-width: 100%; max-width: none; justify-content: flex-start; } .nav-links { white-space: nowrap; } }
+.nav-links a { flex-shrink: 0; text-decoration: none; color: var(--text); font-size: .92rem; font-weight: 800; padding: .58rem .78rem; border-radius: 999px; transition: color .2s ease, background .2s ease, transform .2s ease; }
+.nav-links a:hover, .nav-links a:focus-visible { color: white; background: rgba(255,255,255,.08); transform: translateY(-1px); }
+.logo:focus-visible, .nav-links a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+@media (max-width: 800px) { .navbar { overflow-x: auto; scrollbar-width: none; } .navbar::-webkit-scrollbar { display: none; } .navbar-inner { width: max-content; min-width: 100%; max-width: none; justify-content: flex-start; } .nav-links { white-space: nowrap; } }
