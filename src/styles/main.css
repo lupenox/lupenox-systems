@@ -71,6 +71,88 @@
   opacity: 0.9;
 }
 
+.magic-border,
+.magic-pill {
+  isolation: isolate;
+}
+
+.magic-border::after,
+.magic-pill::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 260ms ease, transform 420ms ease;
+  z-index: 0;
+}
+
+.magic-border::after {
+  inset: -42%;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.95) 0 1px, transparent 1.6px) 12% 46% / 48px 48px no-repeat,
+    radial-gradient(circle, rgba(255,239,188,0.95) 0 1.4px, transparent 2px) 84% 58% / 58px 58px no-repeat,
+    radial-gradient(circle, rgba(191,246,255,0.85) 0 1px, transparent 1.6px) 58% 10% / 46px 46px no-repeat,
+    conic-gradient(from 120deg, transparent 0 58deg, rgba(255,244,204,0.98) 74deg, rgba(255,196,92,0.78) 88deg, transparent 112deg 242deg, rgba(187,224,255,0.92) 260deg, transparent 282deg 360deg);
+  filter: blur(0.15px) drop-shadow(0 0 11px rgba(255,231,169,0.74)) drop-shadow(0 0 18px rgba(167,139,250,0.42));
+  mask: radial-gradient(ellipse at center, transparent 0 48%, #000 50% 53%, transparent 57%);
+  transform: rotate(-18deg) scale(0.88);
+}
+
+.magic-border:hover::after,
+.magic-border:focus-within::after,
+.magic-pill:hover::after,
+.magic-pill:focus-visible::after {
+  opacity: 1;
+  transform: rotate(16deg) scale(1.02);
+  animation: magicOrbit 1800ms cubic-bezier(.2,.75,.2,1) both;
+}
+
+.magic-pill::after {
+  inset: -120% -46%;
+  border-radius: inherit;
+  background: conic-gradient(from 90deg, transparent 0 35%, rgba(255,246,210,0.98) 42%, rgba(255,205,105,0.7) 48%, transparent 55% 100%);
+  filter: drop-shadow(0 0 8px rgba(255,239,184,0.78));
+  mask: radial-gradient(ellipse at center, transparent 0 46%, #000 49% 52%, transparent 55%);
+  transform: rotate(-14deg) scale(0.72);
+}
+
+.magic-starfield::before {
+  content: "✦  ☆  ✧";
+  position: absolute;
+  right: 1rem;
+  top: 0.75rem;
+  z-index: 2;
+  color: rgba(255, 246, 211, 0.95);
+  font-size: 1.05rem;
+  letter-spacing: 0.32rem;
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: 0 0 12px rgba(255, 239, 184, 0.9), 0 0 18px rgba(137, 80, 255, 0.42);
+  transform: translateY(8px) scale(0.86);
+  transition: opacity 220ms ease, transform 340ms ease;
+}
+
+.magic-starfield:hover::before,
+.magic-starfield:focus-within::before {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@keyframes magicOrbit {
+  0% { transform: rotate(-22deg) scale(0.82); }
+  55% { transform: rotate(22deg) scale(1.04); }
+  100% { transform: rotate(14deg) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .magic-border::after,
+  .magic-pill::after,
+  .magic-starfield::before {
+    display: none;
+  }
+}
+
 @media (max-width: 760px) {
   .home-page > section { padding: 4.5rem 1rem; }
 }
