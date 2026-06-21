@@ -19,7 +19,7 @@ function Contact() {
             href="https://github.com/lupenox"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-card glass-card magic-border magic-starfield"
+            className="contact-card glass-card magic-border magic-starfield magic-soft"
           >
             <h3>GitHub</h3>
 
@@ -53,7 +53,7 @@ function Contact() {
             href="https://uwm.joinhandshake.com/profiles/loganlapierre"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-card glass-card magic-border magic-starfield"
+            className="contact-card glass-card magic-border magic-starfield magic-soft"
           >
             <h3>Handshake</h3>
 
@@ -68,7 +68,7 @@ function Contact() {
 
           <a
             href="mailto:logan.lupenox@gmail.com"
-            className="contact-card glass-card magic-border magic-starfield"
+            className="contact-card glass-card magic-border magic-starfield magic-dense"
           >
             <h3>Email</h3>
 
