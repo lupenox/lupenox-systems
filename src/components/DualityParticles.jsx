@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
-const LIGHT_COLORS = ["rgba(255,255,255,0.95)", "rgba(255,237,163,0.9)", "rgba(191,246,255,0.82)"];
-const DARK_COLORS = ["rgba(20,8,38,0.92)", "rgba(92,36,168,0.82)", "rgba(167,139,250,0.74)"];
+const LIGHT_COLORS = ["rgba(110,168,255,0.92)", "rgba(198,216,255,0.82)", "rgba(138,146,166,0.72)"];
+const DARK_COLORS = ["rgba(10,14,26,0.95)", "rgba(26,37,64,0.86)", "rgba(42,58,98,0.74)"];
 
 function randomBetween(min, max) {
   return min + Math.random() * (max - min);
@@ -39,7 +39,7 @@ function drawStar(ctx, particle) {
   ctx.translate(particle.x, particle.y);
   ctx.rotate(particle.rotation);
   ctx.globalAlpha = particle.opacity;
-  ctx.shadowColor = "rgba(255,239,184,0.9)";
+  ctx.shadowColor = "rgba(110,168,255,0.72)";
   ctx.shadowBlur = 12;
   ctx.fillStyle = particle.color;
   ctx.beginPath();
