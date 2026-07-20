@@ -7,6 +7,10 @@
   --bg-2: var(--bg-secondary);
   --text-soft: var(--text-muted);
   --border-strong: color-mix(in srgb, var(--accent) 54%, transparent);
+  --card-bg: color-mix(in srgb, var(--bg-secondary) 72%, var(--bg-primary));
+  --card-bg-soft: color-mix(in srgb, var(--bg-secondary) 54%, var(--bg-primary));
+  --card-border: color-mix(in srgb, var(--accent) 18%, transparent);
+  --card-shadow: 0 22px 70px rgba(0, 0, 0, 0.38), 0 0 28px color-mix(in srgb, var(--accent) 10%, transparent);
   --cyan: var(--accent);
   --blue: var(--accent);
   --purple: var(--accent);
@@ -108,9 +112,9 @@
 .glass-card {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.045));
-  box-shadow: var(--shadow);
+  border: 1px solid var(--card-border);
+  background: linear-gradient(135deg, var(--card-bg), var(--card-bg-soft));
+  box-shadow: var(--card-shadow);
   backdrop-filter: blur(22px) saturate(150%);
   -webkit-backdrop-filter: blur(22px) saturate(150%);
 }
@@ -120,6 +124,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
+  background: linear-gradient(135deg, color-mix(in srgb, white 8%, transparent), transparent 28%, transparent 70%, color-mix(in srgb, var(--accent) 8%, transparent));
   background: linear-gradient(135deg, rgba(255,255,255,0.22), transparent 28%, transparent 70%, color-mix(in srgb, var(--accent) 8%, transparent));
   opacity: 0.9;
   z-index: 0;

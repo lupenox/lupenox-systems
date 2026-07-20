@@ -1,5 +1,6 @@
 .skills-container { width: 100%; max-width: var(--container-max); margin: 0 auto; }
 .skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); }
+.skill-card { position: relative; overflow: hidden; min-width: 0; padding: var(--space-5); border-radius: var(--radius-card); background: linear-gradient(135deg, var(--card-bg), var(--card-bg-soft)); border: 1px solid var(--card-border); box-shadow: var(--card-shadow); backdrop-filter: blur(20px); transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
 .skill-card { position: relative; overflow: hidden; min-width: 0; padding: var(--space-5); border-radius: var(--radius-card); background: linear-gradient(135deg, rgba(255,255,255,.1), rgba(255,255,255,.045)); border: 1px solid var(--border); box-shadow: var(--shadow); backdrop-filter: blur(20px); transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
 .skill-card:hover, .skill-card:focus-within { transform: var(--card-hover-transform); border-color: var(--card-hover-border); box-shadow: var(--card-hover-shadow); }
 .skill-card::after { content: ""; position: absolute; inset: auto var(--space-5) 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent)); opacity: .8; }
@@ -7,6 +8,8 @@
 .skill-card h3 { position: relative; z-index: 1; margin-bottom: var(--space-4); font-size: var(--font-size-h3); line-height: var(--line-height-h3); }
 .skill-pill-container { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .skill-pill { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-3); border-radius: var(--radius-pill); color: #e5edff; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); }
+.skill-icon { color: var(--text-muted); font-size: var(--font-size-caption); line-height: var(--line-height-caption); filter: grayscale(1) saturate(0); opacity: .78; transition: color .25s ease, filter .25s ease, opacity .25s ease; }
+.skill-card:hover .skill-icon, .skill-card:focus-within .skill-icon { color: var(--accent); filter: grayscale(1) saturate(0); opacity: 1; }
 .skill-icon { font-size: var(--font-size-caption); line-height: var(--line-height-caption); filter: saturate(1.25); }
 .skill-card:last-child:nth-child(odd) { grid-column: span 2; }
 @media (max-width: 800px) { .skills-grid { grid-template-columns: 1fr; } .skill-card:last-child:nth-child(odd) { grid-column: span 1; } }
