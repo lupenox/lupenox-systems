@@ -125,6 +125,7 @@
   inset: 0;
   pointer-events: none;
   background: linear-gradient(135deg, color-mix(in srgb, white 8%, transparent), transparent 28%, transparent 70%, color-mix(in srgb, var(--accent) 8%, transparent));
+  background: linear-gradient(135deg, rgba(255,255,255,0.22), transparent 28%, transparent 70%, color-mix(in srgb, var(--accent) 8%, transparent));
   opacity: 0.9;
   z-index: 0;
 }
