@@ -165,6 +165,21 @@
   transform: translateY(-2px);
 }
 
+.btn-resume {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.15);
+}
+
+.btn-resume:hover {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: #38bdf8;
+  color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.25);
+}
+
 .btn-tertiary {
   background: transparent;
   color: #94a3b8;
@@ -174,6 +189,7 @@
 .btn-tertiary:hover {
   color: #f8fafc;
 }
+
 
 @media (max-width: 768px) {
   .hero-section {

@@ -1,3 +1,4 @@
+import resumePdf from "../assets/Logan_Lapierre_AI_Engineering_Resume.pdf";
 import "../styles/sections/contact.css";
 
 function Contact() {
@@ -38,14 +39,27 @@ function Contact() {
           </a>
 
           <a
+            href={resumePdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-card"
+          >
+            <h3>AI Engineering Resume</h3>
+            <p>
+              View or download my complete formal PDF resume detailing technical background and project architectures.
+            </p>
+            <span className="contact-link">View Resume PDF ↗</span>
+          </a>
+
+          <a
             href="https://uwm.joinhandshake.com/profiles/loganlapierre"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-card"
           >
-            <h3>Handshake Student Profile</h3>
+            <h3>Handshake Profile</h3>
             <p>
-              View my academic history, computer science coursework, and university project links.
+              View my academic record, computer science coursework, and university background.
             </p>
             <span className="contact-link">View Handshake Profile ↗</span>
           </a>

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import resumePdf from "../assets/Logan_Lapierre_AI_Engineering_Resume.pdf";
 import "../styles/components/navbar.css";
 
 const navigationItems = [
@@ -56,6 +57,14 @@ function Navbar() {
               {item.label}
             </a>
           ))}
+          <a
+            className="resume-button"
+            href={resumePdf}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Resume ↗
+          </a>
         </div>
 
         <button
@@ -91,6 +100,15 @@ function Navbar() {
               {item.label}
             </a>
           ))}
+          <a
+            className="resume-button mobile-resume-button"
+            href={resumePdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+          >
+            View Resume ↗
+          </a>
         </div>
       </div>
     </nav>
@@ -98,4 +116,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
