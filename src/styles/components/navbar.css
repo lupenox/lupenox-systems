@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   background: rgba(22, 23, 29, 0.7);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -20,12 +20,17 @@
   gap: 1rem;
 
   width: 100%;
+  min-width: 0;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo {
   flex-shrink: 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-weight: 600;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -39,9 +44,10 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  min-width: 0;
 }
 
-.nav-links a {
+.navbar .nav-link {
   flex-shrink: 0;
   text-decoration: none;
   color: var(--text);
@@ -51,7 +57,7 @@
   position: relative;
 }
 
-.nav-links a::after {
+.navbar .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -62,38 +68,174 @@
   transition: width 0.25s ease;
 }
 
-.nav-links a:hover::after {
+.navbar .nav-link:hover::after {
   width: 100%;
 }
 
-.nav-links a:hover {
+.navbar .nav-link:hover {
   color: var(--text-h);
 }
 
-@media (max-width: 800px) {
-  .navbar {
-    overflow-x: auto;
-  }
+.resume-button {
+  min-height: 36px;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: rgba(192, 132, 252, 0.12);
+  color: var(--text-h);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
 
+.resume-button:not(:disabled):hover {
+  background: rgba(192, 132, 252, 0.22);
+  border-color: var(--text-h);
+}
+
+.resume-button:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.menu-toggle,
+.mobile-navigation {
+  display: none;
+}
+
+.menu-toggle {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.menu-toggle-icon {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 16px;
+}
+
+.menu-toggle-icon span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition:
+    top 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.menu-toggle-icon span:nth-child(1) {
+  top: 0;
+}
+
+.menu-toggle-icon span:nth-child(2) {
+  top: 7px;
+}
+
+.menu-toggle-icon span:nth-child(3) {
+  top: 14px;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-icon span:nth-child(1) {
+  top: 7px;
+  transform: rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-icon span:nth-child(3) {
+  top: 7px;
+  transform: rotate(-45deg);
+}
+
+.navbar .nav-link:focus-visible,
+.resume-button:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
   .navbar-inner {
-    width: max-content;
-    min-width: 100%;
-    max-width: none;
-    padding: 0 20px;
-    justify-content: flex-start;
-    gap: 32px;
+    padding: 0 1rem;
+    gap: 1rem;
   }
 
   .nav-links {
-    gap: 24px;
-    white-space: nowrap;
+    display: none;
   }
 
-  .nav-links a {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .mobile-navigation {
+    width: 100%;
+    max-width: 100%;
+    border-top: 1px solid var(--border);
+    background: rgba(22, 23, 29, 0.96);
+  }
+
+  .mobile-navigation:not([hidden]) {
+    display: block;
+  }
+
+  .mobile-navigation-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+    max-width: 1200px;
+    max-height: calc(100dvh - 60px);
+    margin: 0 auto;
+    padding: 0.75rem 1rem 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .mobile-navigation .nav-link {
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem;
+    border-radius: 6px;
     font-size: 0.95rem;
+    overflow-wrap: anywhere;
   }
 
-  .logo {
-    margin-right: 8px;
+  .mobile-navigation .nav-link::after {
+    display: none;
+  }
+
+  .mobile-navigation .nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .mobile-navigation .resume-button {
+    width: 100%;
+    min-width: 0;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
   }
 }
