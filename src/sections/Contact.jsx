@@ -3,48 +3,38 @@ import "../styles/sections/contact.css";
 function Contact() {
   return (
     <section id="contact" className="contact-section">
-      <div className="contact-container">
-
-        <h2>Contact</h2>
+      <div className="contact-container container">
+        <h2>Get In Touch</h2>
 
         <p className="contact-subtitle">
-          Connect with me through GitHub, LinkedIn, Handshake, or email.
+          I am seeking remote AI Engineering, Applied AI, or AI Software Engineering internships and entry-level roles. Graduating December 2026 (Available full-time January 2027).
         </p>
 
         <div className="contact-grid">
-
           <a
             href="https://github.com/lupenox"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-card"
           >
-            <h3>GitHub</h3>
-
+            <h3>GitHub Repositories</h3>
             <p>
-              View my projects, repositories, and open-source work.
+              Inspect verified source code, architecture patterns, and unit tests across my AI projects.
             </p>
-
-            <span className="contact-link">
-              github.com/lupenox →
-            </span>
+            <span className="contact-link">github.com/lupenox ↗</span>
           </a>
 
           <a
-            href="https://www.linkedin.com/in/logan-lapierre-555348354"
+            href="https://www.linkedin.com/in/logan-lapierre-555348354/"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-card"
           >
-            <h3>LinkedIn</h3>
-
+            <h3>LinkedIn Profile</h3>
             <p>
-              Connect with me professionally and view my experience.
+              Connect with me professionally, view certifications, and discuss AI Engineering opportunities.
             </p>
-
-            <span className="contact-link">
-              View LinkedIn →
-            </span>
+            <span className="contact-link">View LinkedIn Profile ↗</span>
           </a>
 
           <a
@@ -53,35 +43,21 @@ function Contact() {
             rel="noopener noreferrer"
             className="contact-card"
           >
-            <h3>Handshake</h3>
-
+            <h3>Handshake Student Profile</h3>
             <p>
-              View my student and career profile through Handshake.
+              View my academic history, computer science coursework, and university project links.
             </p>
-
-            <span className="contact-link">
-              View Handshake →
-            </span>
+            <span className="contact-link">View Handshake Profile ↗</span>
           </a>
 
-          <a
-            href="mailto:logan.lupenox@gmail.com"
-            className="contact-card"
-          >
-            <h3>Email</h3>
-
+          <a href="mailto:logan.lupenox@gmail.com" className="contact-card">
+            <h3>Direct Email</h3>
             <p>
-              Reach out directly for opportunities, collaboration,
-              networking, or technical discussions.
+              Reach out directly for interviews, technical discussions, software roles, or collaboration.
             </p>
-
-            <span className="contact-link">
-              logan.lupenox@gmail.com →
-            </span>
+            <span className="contact-link">logan.lupenox@gmail.com ✉</span>
           </a>
-
         </div>
-
       </div>
     </section>
   );

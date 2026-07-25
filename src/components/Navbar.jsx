@@ -3,35 +3,11 @@ import "../styles/components/navbar.css";
 
 const navigationItems = [
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
+  { label: "Capabilities", href: "#skills" },
+  { label: "Flagship Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
-
-const RESUME_URL = ""; // TODO: Add the future résumé URL here when it is available.
-
-function ResumeAction({ onNavigate }) {
-  if (RESUME_URL) {
-    return (
-      <a className="resume-button" href={RESUME_URL} onClick={onNavigate}>
-        Resume
-      </a>
-    );
-  }
-
-  return (
-    <button
-      className="resume-button"
-      type="button"
-      disabled
-      aria-label="Resume (coming soon)"
-      title="Resume link coming soon"
-    >
-      Resume
-    </button>
-  );
-}
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,7 +46,9 @@ function Navbar() {
   return (
     <nav className="navbar" aria-label="Primary navigation">
       <div className="navbar-inner">
-        <div className="logo">Logan</div>
+        <a className="logo" href="#about">
+          Logan Lapierre <span className="logo-badge">AI</span>
+        </a>
 
         <div className="nav-links">
           {navigationItems.map((item) => (
@@ -78,7 +56,6 @@ function Navbar() {
               {item.label}
             </a>
           ))}
-          <ResumeAction />
         </div>
 
         <button
@@ -114,7 +91,6 @@ function Navbar() {
               {item.label}
             </a>
           ))}
-          <ResumeAction onNavigate={closeMenu} />
         </div>
       </div>
     </nav>
@@ -122,3 +98,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
