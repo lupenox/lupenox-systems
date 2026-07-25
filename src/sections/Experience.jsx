@@ -164,6 +164,37 @@ function Experience() {
             </div>
           </article>
         </div>
+
+        {/* Compact Supporting Work Experience Section */}
+        <div className="supporting-experience-wrapper">
+          <h3 className="supporting-experience-title">
+            Supporting Professional Experience
+          </h3>
+          <p className="supporting-experience-subtitle">
+            Parallel work experience highlighting daily operational reliability, team coordination, adaptability, and clear communication alongside computer science studies.
+          </p>
+
+          <article className="experience-card supporting-work-card">
+            <div className="experience-card-header">
+              <h3>Server</h3>
+              <span className="experience-date">
+                New Perspective Senior Living • Waukesha, WI | June 2026 – Present
+              </span>
+            </div>
+
+            <p className="experience-description">
+              Provide attentive meal and beverage service for senior residents, coordinate daily service flow with the culinary team, manage dining-room setup and sanitation, complete resident room deliveries, assist with dishwashing and support duties, and fulfill barista responsibilities.
+            </p>
+
+            <div className="experience-pill-list">
+              <span className="experience-pill">Reliability</span>
+              <span className="experience-pill">Teamwork</span>
+              <span className="experience-pill">Communication</span>
+              <span className="experience-pill">Adaptability</span>
+              <span className="experience-pill">Responsibility</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   );

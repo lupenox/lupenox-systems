@@ -138,6 +138,32 @@
   margin-top: 1rem;
 }
 
+.supporting-experience-wrapper {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.supporting-experience-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 0.4rem;
+}
+
+.supporting-experience-subtitle {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.supporting-work-card {
+  max-width: 100%;
+  background-color: rgba(19, 28, 46, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 @media (max-width: 850px) {
   .experience-grid {
     grid-template-columns: 1fr;
