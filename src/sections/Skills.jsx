@@ -3,62 +3,76 @@ import "../styles/sections/skills.css";
 import SkillDisplay from "../components/Skill_Display";
 
 const skillList = {
-  infrastructure: {
-    title: "Infrastructure & DevOps",
+  agentic: {
+    title: "Agentic AI & Web Automation",
+    description: "Multi-stage agent workflows, headless browser automation, and LLM-powered reranking.",
     items: [
-      { id: 1, name: "Linux", icon: "🐧" },
-      { id: 2, name: "Bash", icon: "💻" },
-      { id: 3, name: "Docker", icon: "🐳" },
-      { id: 4, name: "CI/CD", icon: "⚙️" },
-      { id: 5, name: "GitHub Actions", icon: "🚀" },
-      { id: 6, name: "AWS", icon: "☁️" },
+      { name: "LiveKit Agents" },
+      { name: "Apify API" },
+      { name: "Playwright" },
+      { name: "Gemini 1.5 Flash" },
+      { name: "Multi-Stage State Machines" },
     ],
   },
 
-  programming: {
-    title: "Programming & Scripting",
+  voiceMultimodal: {
+    title: "Real-Time Voice & Multimodal Systems",
+    description: "Low-latency speech-to-text, text-to-speech, voice activity detection, and streaming audio.",
     items: [
-      { id: 7, name: "Python", icon: "🐍" },
-      { id: 8, name: "JavaScript", icon: "🟨" },
-      { id: 9, name: "TypeScript", icon: "🔷" },
-      { id: 10, name: "C", icon: "🔧" },
-      { id: 11, name: "Java", icon: "☕" },
+      { name: "Deepgram STT (Nova-3)" },
+      { name: "ElevenLabs TTS" },
+      { name: "Silero VAD" },
+      { name: "openWakeWord" },
+      { name: "PyAudio & SpeechRecognition" },
     ],
   },
 
-  frameworks: {
-    title: "Frameworks & Platforms",
+  localLlm: {
+    title: "Local LLM & Model Orchestration",
+    description: "On-device inference pipelines, open-source model execution, and fine-tuning preparation.",
     items: [
-      { id: 12, name: "React", icon: "⚛️" },
-      { id: 13, name: "React Native", icon: "📱" },
-      { id: 14, name: "Deno", icon: "🦕" },
-      { id: 15, name: "Flask", icon: "🌶️" },
-      { id: 16, name: "FastAPI", icon: "⚡" },
-      { id: 17, name: "Vercel", icon: "▲" },
+      { name: "Hugging Face Transformers" },
+      { name: "Ollama API" },
+      { name: "PyTorch" },
+      { name: "LoRA / PEFT Prep" },
+      { name: "Model Caching & Selection" },
     ],
   },
 
-  testing: {
-    title: "Testing & Quality",
+  backends: {
+    title: "AI Backends & API Engineering",
+    description: "Robust service interfaces, web framework backends, and cross-platform desktop UI integration.",
     items: [
-      { id: 18, name: "Jest", icon: "🧪" },
-      { id: 19, name: "Manual Testing", icon: "✅" },
-      { id: 20, name: "Linting", icon: "✨" },
-      { id: 21, name: "Debugging", icon: "🛠️" },
-      { id: 22, name: "Git", icon: "🌿" },
-      { id: 23, name: "GitHub", icon: "🐙" },
+      { name: "Python" },
+      { name: "Flask" },
+      { name: "FastAPI" },
+      { name: "REST APIs" },
+      { name: "Electron Desktop Apps" },
+      { name: "React & Next.js" },
     ],
   },
 
-  databasesAi: {
-    title: "Databases & AI Tools",
+  evalTesting: {
+    title: "Evaluation, Testing & Reliability",
+    description: "Mock-isolated unit testing, guardrail evaluation, and client-side usage/budget widgets.",
     items: [
-      { id: 24, name: "PostgreSQL", icon: "🐘" },
-      { id: 25, name: "Neon", icon: "🗄️" },
-      { id: 26, name: "Auth0", icon: "🔐" },
-      { id: 27, name: "Transformers", icon: "🧠" },
-      { id: 28, name: "Ollama", icon: "🦙" },
-      { id: 29, name: "Local LLMs", icon: "💬" },
+      { name: "Python unittest (Provider Fakes)" },
+      { name: "Pytest Automation" },
+      { name: "Guardrail Policy Evaluation" },
+      { name: "API Usage Budget Tracking" },
+    ],
+  },
+
+  cloudDevops: {
+    title: "Cloud, Linux & CI/CD Infrastructure",
+    description: "Operational foundation for containerizing, testing, and deploying AI applications reliably.",
+    items: [
+      { name: "Linux Systems" },
+      { name: "Docker Containers" },
+      { name: "GitHub Actions CI/CD" },
+      { name: "AWS Cloud" },
+      { name: "Terraform IaC" },
+      { name: "Git & Vercel" },
     ],
   },
 };
@@ -66,11 +80,10 @@ const skillList = {
 function Skills() {
   return (
     <section id="skills" className="skills-section">
-      <div className="skills-container">
-        <h2 className="header">Skills</h2>
+      <div className="skills-container container">
+        <h2 className="header">AI Engineering Capabilities</h2>
         <p className="skills-subtitle">
-          Technologies and tools I’ve used across automation, backend
-          development, infrastructure, testing, debugging, and local AI projects.
+          Verified technical skills across real-time voice agents, autonomous web workflows, on-device LLM inference, model evaluation, and backend infrastructure.
         </p>
 
         <div className="skills-grid">

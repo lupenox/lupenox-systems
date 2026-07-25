@@ -3,59 +3,42 @@ import "../styles/sections/sections.css";
 import "../styles/sections/about.css";
 
 function About() {
-  
   return (
-<section id="about" className="about-section">
+    <section id="about" className="about-section">
+      <div className="about-container container">
+        <div className="about-image">
+          <img src={profilePic} alt="Logan Lapierre - AI Engineer" id="Me" />
+        </div>
 
-  <div className="about-container">
+        <div className="about-content">
+          <p className="about-tag">
+            AI ENGINEER • COMPUTER SCIENCE SENIOR
+          </p>
 
-    <div className="about-image">
-      <img src={profilePic} alt="Logan Lapierre" id="Me"/>
-    </div>
+          <h2>About Me</h2>
 
-    <div className="about-content">
-      <p className="about-tag">
-        COMPUTER SCIENCE STUDENT • DEVOPS FOCUSED
-      </p>
+          <div className="text">
+            <p>
+              Hi, I'm <strong>Logan Lapierre</strong>, a senior at the University of Wisconsin–Milwaukee studying Computer Science. I build agentic web workflows, real-time voice AI agents, on-device local model pipelines, and machine learning applications.
+            </p>
 
-      <h2>About Me</h2>
+            <p>
+              My engineering approach centers on practical, evidence-driven AI application development. Rather than relying solely on cloud API wrappers or high-level abstractions, I focus on system-level performance — optimizing real-time voice latency with WebRTC and STT/TTS streams, engineering state-machine agent workflows, running local LLMs on-device, and backing services with reliable Linux and CI/CD infrastructure.
+            </p>
 
-      <div className="text"> 
-      <p>
-        Hello, I'm Logan Lapierre, a senior at the University of
-        Wisconsin–Milwaukee studying Computer Science.
-      </p>
+            <p>
+              My background in Linux administration, Docker containerization, AWS cloud, C sockets, and Python backend engineering gives me the operational foundation to deploy, monitor, and scale AI-powered systems safely.
+            </p>
 
-      <p>
-        My interests include Linux, DevOps, CI/CD, automation,
-        scripting, cloud technologies, and backend development.
-        I enjoy building tools and applications that improve
-        workflows, experimenting with AI-driven projects, and
-        modding video games.
-      </p>
-
-      <p>
-        I'm especially passionate about infrastructure-focused
-        engineering and enjoy solving technical problems,
-        debugging systems, and learning new technologies.
-        I'm currently pursuing opportunities in areas such as
-        DevOps, Site Reliability Engineering (SRE), Linux System
-        Administration, cloud support, and backend engineering.
-      </p>
-
-      <p>
-        I'm highly motivated, adaptable, and always looking for
-        opportunities to grow both technically and professionally.
-      </p>
+            <div className="about-highlight-box">
+              🎯 <strong>Career Target:</strong> I am actively seeking remote <strong>AI Engineering</strong>, <strong>Applied AI</strong>, or <strong>AI Software Engineering</strong> internships and entry-level roles. Expected graduation: <strong>December 2026</strong> (Available for full-time employment starting <strong>January 2027</strong>).
+            </div>
+          </div>
+        </div>
       </div>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
   );
-
 }
 
 export default About;
+

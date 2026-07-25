@@ -1,135 +1,149 @@
 .experience-section {
-    padding: 80px 32px;
-  }
-  
-  .experience-container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  
-  .experience-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-  }
-  
-  .experience-subtitle {
-    color: #a9afbd;
-    font-size: 1.1rem;
-    margin-bottom: 32px;
-  }
-  
+  padding: 5rem 0;
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.experience-subtitle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  max-width: 840px;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.experience-card {
+  padding: 1.75rem;
+  border-radius: 14px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-active);
+}
+
+.experience-card-header {
+  margin-bottom: 1rem;
+}
+
+.experience-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 0.35rem;
+}
+
+.experience-date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.experience-description {
+  color: #cbd5e1;
+  font-size: 0.975rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.experience-list {
+  color: #cbd5e1;
+  font-size: 0.925rem;
+  line-height: 1.6;
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.experience-list li {
+  margin-bottom: 0.35rem;
+}
+
+.experience-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.experience-pill {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+
+.experience-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0.85rem;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.course-item {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.experience-availability-tag {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.experience-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.experience-link:hover {
+  opacity: 0.85;
+}
+
+.experience-project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 850px) {
   .experience-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-  }
-  
-  .experience-card {
-    padding: 24px;
-    border-radius: 22px;
-  
-    background: rgba(255, 255, 255, 0.04);
-  
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.03);
-  
-    transition:
-      transform 0.25s ease,
-      border-color 0.25s ease,
-      box-shadow 0.25s ease;
-  }
-  
-  .experience-card:hover {
-    transform: translateY(-4px);
-  
-    border-color: rgba(180, 200, 255, 0.22);
-  
-    box-shadow: 0 0 28px rgba(180, 200, 255, 0.08);
-  }
-  
-  .experience-card-header {
-    margin-bottom: 16px;
-  }
-  
-  .experience-card h3 {
-    font-size: 1.35rem;
-    margin-bottom: 8px;
-  }
-  
-  .experience-date {
-    color: #a9afbd;
-    font-size: 0.95rem;
-  }
-  
-  .experience-description {
-    color: #a9afbd;
-    line-height: 1.7;
-    margin-bottom: 18px;
-  }
-  
-  .experience-list {
-    color: #a9afbd;
-    line-height: 1.7;
-    padding-left: 20px;
-    margin-bottom: 18px;
-  }
-  
-  .experience-pill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .experience-pill {
-    display: inline-flex;
-    align-items: center;
-  
-    padding: 8px 13px;
-  
-    border-radius: 999px;
-  
-    color: white;
-  
-    background: rgba(255, 255, 255, 0.07);
-  
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  
-  @media (max-width: 900px) {
-    .experience-grid {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
   }
 
-  .experience-link {
-    display: inline-block;
-  
-    margin-top: 18px;
-  
-    color: #d7dbe5;
-  
-    text-decoration: none;
-  
-    font-weight: 600;
-  
-    transition:
-      opacity 0.2s ease,
-      transform 0.2s ease;
+  .experience-courses-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .experience-link:hover {
-    opacity: 0.8;
-  
-    transform: translateX(2px);
-  }
-
-  .experience-project-links {
-    display: flex;
-    flex-direction: column;
-  
-    gap: 10px;
-  
-    margin-top: 18px;
-  }
+}
