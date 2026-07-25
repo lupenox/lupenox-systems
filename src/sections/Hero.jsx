@@ -1,3 +1,4 @@
+import resumePdf from "../assets/Logan_Lapierre_AI_Engineering_Resume.pdf";
 import "../styles/sections/hero.css";
 import "../styles/sections/sections.css";
 import DarkVeil from "../components/Animated_Background";
@@ -35,6 +36,13 @@ function Hero() {
         <div className="hero-actions">
           <a href="#projects" className="btn btn-primary">
             Explore Flagship Projects ↓
+          </a>
+          <a
+            href={resumePdf}
+            download="Logan_Lapierre_AI_Engineering_Resume.pdf"
+            className="btn btn-resume"
+          >
+            Download Resume ↓
           </a>
           <a
             href="https://github.com/lupenox"

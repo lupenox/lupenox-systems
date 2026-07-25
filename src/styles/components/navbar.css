@@ -139,7 +139,26 @@
   transform: rotate(-45deg);
 }
 
+.resume-button {
+  padding: 0.45rem 0.95rem;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.resume-button:hover {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: #38bdf8;
+  color: #f8fafc;
+}
+
 .navbar .nav-link:focus-visible,
+.resume-button:focus-visible,
 .menu-toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -186,5 +205,11 @@
   .mobile-navigation .nav-link:hover {
     background: rgba(255, 255, 255, 0.05);
   }
+
+  .mobile-resume-button {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
 }
+
 
