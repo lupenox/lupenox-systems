@@ -4,6 +4,55 @@ import ProjectDisplay from "../components/Project_Display";
 
 const flagshipProjects = [
   {
+    id: 0,
+    isFlagship: true,
+    title: "Resume Tailor",
+    category: "Local Multi-Agent AI & Document Automation",
+    status: "Working Prototype",
+    problem:
+      "Generic resume generators can invent claims, obscure how content changed, and depend on opaque cloud workflows that expose private career data.",
+    description:
+      "A local Linux CLI and localhost web application that retrieves job postings, maps requirements to immutable resume evidence, generates schema-constrained tailored content with Codex and local Gemma through Ollama, and deterministically renders and validates a one-page DOCX/PDF behind human approval gates.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "OpenAI Codex CLI",
+      "Gemma 4 12B",
+      "Ollama",
+      "Apify API",
+      "JSON Schema",
+      "python-docx",
+      "LibreOffice / Poppler",
+      "SQLite",
+    ],
+    github: "https://github.com/lupenox/resume-tailor",
+    diagramSvg: `<svg viewBox="0 0 700 110" xmlns="http://www.w3.org/2000/svg" class="svg-diagram"><rect width="700" height="110" rx="8" fill="#0f172a"/><g font-size="11" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" text-anchor="middle"><rect x="15" y="35" width="110" height="40" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/><text x="70" y="52" fill="#f8fafc">Job Posting</text><text x="70" y="66" fill="#38bdf8">URL or Text</text><path d="M125 55 h20" stroke="#38bdf8" stroke-width="1.5"/><rect x="145" y="35" width="120" height="40" rx="6" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/><text x="205" y="52" fill="#f8fafc">Apify + Local</text><text x="205" y="66" fill="#06b6d4">Validation</text><path d="M265 55 h20" stroke="#38bdf8" stroke-width="1.5"/><rect x="285" y="35" width="125" height="40" rx="6" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/><text x="347" y="52" fill="#f8fafc">Codex Evidence</text><text x="347" y="66" fill="#6366f1">Analysis</text><path d="M410 55 h20" stroke="#38bdf8" stroke-width="1.5"/><rect x="430" y="35" width="125" height="40" rx="6" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/><text x="492" y="52" fill="#f8fafc">Gemma 4 / Ollama</text><text x="492" y="66" fill="#a855f7">Schema Writer</text><path d="M555 55 h20" stroke="#38bdf8" stroke-width="1.5"/><rect x="575" y="35" width="110" height="40" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/><text x="630" y="52" fill="#f8fafc">DOCX / PDF</text><text x="630" y="66" fill="#10b981">QA + Approval</text></g></svg>`,
+    architectureBullets: [
+      {
+        title: "Evidence-Bound Requirement Analysis",
+        detail:
+          "Builds immutable resume-source and job-requirement catalogs with stable IDs, then uses Codex in a read-only session to classify supported and unsupported requirements without inventing candidate evidence.",
+      },
+      {
+        title: "Local Schema-Constrained Writer",
+        detail:
+          "Runs Gemma 4 12B through a fixed localhost Ollama endpoint and requires one strict JSON object that passes canonical schema, factual-integrity, technology, metric, seniority, structure, and content-budget validation.",
+      },
+      {
+        title: "Human Approval & Deterministic Rendering",
+        detail:
+          "Places approval gates around the retrieved posting, evidence analysis, and content diff while deterministic Python controls typography, page geometry, section ordering, hyperlinks, and DOCX generation without modifying the source resume.",
+      },
+      {
+        title: "Validated Export & Independent Final QA",
+        detail:
+          "Exports through an isolated LibreOffice profile, checks the one-page PDF with Poppler text and bounding-box validation, renders a preview, and performs a fresh Codex visual/content review with only one bounded revision path.",
+      },
+    ],
+    testingNote:
+      "Uses fail-closed schema and evidence checks, source and artifact hashes, deterministic document validation, preserved run artifacts, and nonzero exits when retrieval, generation, rendering, or final QA cannot be authenticated.",
+  },
+  {
     id: 1,
     isFlagship: true,
     title: "LiveKit AI Mock Interview Agent",
@@ -276,7 +325,7 @@ function Projects() {
       <div className="projects-container container">
         <h2 className="header">Flagship AI Projects</h2>
         <p className="projects-subtitle">
-          Verified evidence-driven case studies detailing real-time voice pipelines, agentic web automation, on-device LLM inference, and machine learning models.
+          Verified evidence-driven case studies detailing local multi-agent pipelines, real-time voice systems, agentic web automation, on-device LLM inference, and machine learning models.
         </p>
 
         <div className="projects-flagship-grid">
