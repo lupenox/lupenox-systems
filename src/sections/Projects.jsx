@@ -155,18 +155,18 @@ const flagshipProjects = [
       "Python",
       "Apify API",
       "Playwright",
-      "Gemini 1.5 Flash",
+      "Gemini",
       "LLM Candidate Reranker",
       "Domain Validator",
       "Pytest",
     ],
     github: "https://github.com/lupenox/job-source-agent",
-    diagramSvg: `<svg viewBox="0 0 650 110" xmlns="http://www.w3.org/2000/svg" class="svg-diagram"><rect width="650" height="110" rx="8" fill="#0f172a"/><g font-size="11" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" text-anchor="middle"><rect x="15" y="35" width="110" height="40" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/><text x="70" y="53" fill="#f8fafc">LinkedIn URL</text><text x="70" y="67" fill="#38bdf8">Job or Company</text><path d="M125 55 h30" stroke="#38bdf8" stroke-width="1.5"/><rect x="155" y="35" width="120" height="40" rx="6" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/><text x="215" y="53" fill="#f8fafc">Apify API</text><text x="215" y="67" fill="#06b6d4">Domain Extractor</text><path d="M275 55 h30" stroke="#38bdf8" stroke-width="1.5"/><rect x="305" y="25" width="160" height="60" rx="6" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/><text x="385" y="47" fill="#f8fafc">Gemini 1.5 Flash</text><text x="385" y="63" fill="#a855f7" font-size="10">LLM Candidate Reranker</text><path d="M465 55 h30" stroke="#38bdf8" stroke-width="1.5"/><rect x="495" y="35" width="140" height="40" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/><text x="565" y="53" fill="#f8fafc">Playwright Headless</text><text x="565" y="67" fill="#10b981">Job Link Extractor</text></g></svg>`,
+    diagramSvg: `<svg viewBox="0 0 650 110" xmlns="http://www.w3.org/2000/svg" class="svg-diagram"><rect width="650" height="110" rx="8" fill="#0f172a"/><g font-size="11" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" text-anchor="middle"><rect x="15" y="35" width="110" height="40" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/><text x="70" y="53" fill="#f8fafc">LinkedIn URL</text><text x="70" y="67" fill="#38bdf8">Job or Company</text><path d="M125 55 h30" stroke="#38bdf8" stroke-width="1.5"/><rect x="155" y="35" width="120" height="40" rx="6" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/><text x="215" y="53" fill="#f8fafc">Apify API</text><text x="215" y="67" fill="#06b6d4">Domain Extractor</text><path d="M275 55 h30" stroke="#38bdf8" stroke-width="1.5"/><rect x="305" y="25" width="160" height="60" rx="6" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/><text x="385" y="47" fill="#f8fafc">Gemini LLM</text><text x="385" y="63" fill="#a855f7" font-size="10">LLM Candidate Reranker</text><path d="M465 55 h30" stroke="#38bdf8" stroke-width="1.5"/><rect x="495" y="35" width="140" height="40" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/><text x="565" y="53" fill="#f8fafc">Playwright Headless</text><text x="565" y="67" fill="#10b981">Job Link Extractor</text></g></svg>`,
     architectureBullets: [
       {
         title: "Hybrid Keyword + LLM Candidate Reranking",
         detail:
-          "Combines fast rule-based link scoring with Gemini 1.5 Flash candidate evaluation to pick the exact career page link on complex corporate domains.",
+          "Combines fast rule-based link scoring with Gemini candidate evaluation to pick the exact career page link on complex corporate domains.",
       },
       {
         title: "Headless Browser Automation",
@@ -266,6 +266,45 @@ const flagshipProjects = [
 
 const supportingProjects = [
   {
+    id: 10,
+    isFlagship: false,
+    title: "rag-knowledge-engine",
+    category: "Retrieval-Augmented Generation",
+    status: "Working Prototype",
+    problem:
+      "Naive RAG demos stuff documents into a prompt, invent answers when retrieval misses, and are judged by vibe checks instead of measured evals.",
+    description:
+      "Production-style grounded RAG: hybrid search, reranking, citation-enforcing answers, streaming API, and RAGAS-style evals. FastAPI + pgvector + local embeddings.",
+    tech: ["Python", "FastAPI", "pgvector", "BM25 Hybrid Search", "Ollama", "SSE Streaming", "Offline Evals"],
+    github: "https://github.com/lupenox/rag-knowledge-engine",
+  },
+  {
+    id: 11,
+    isFlagship: false,
+    title: "doc-extraction-engine",
+    category: "Document AI & Background Workers",
+    status: "Working Prototype",
+    problem:
+      "Finance and ops teams need invoice fields they can post to a ledger, with the math checked in code and exceptions routed to a human instead of trusted to a model.",
+    description:
+      "High-throughput document extraction API: multimodal invoice/receipt parsing, Pydantic math validation, Celery workers, and a human review queue.",
+    tech: ["Python", "FastAPI", "Pydantic", "Celery", "Redis", "Ollama Vision", "SQLAlchemy"],
+    github: "https://github.com/lupenox/doc-extraction-engine",
+  },
+  {
+    id: 12,
+    isFlagship: false,
+    title: "lead-qualification-agent",
+    category: "Agentic Workflow & Sales Ops",
+    status: "Working Prototype",
+    problem:
+      "Most AI SDR demos hide how a lead was scored; sales teams need an inspectable rubric, an audit log, and a deterministic fallback when the model is down.",
+    description:
+      "Autonomous lead qualification agent: scrape public company pages, score against an ICP rubric, route, and draft outreach. FastAPI + LangGraph + Ollama, with Docker and tests.",
+    tech: ["Python", "FastAPI", "LangGraph", "Ollama", "SQLite", "Docker", "Pytest"],
+    github: "https://github.com/lupenox/lead-qualification-agent",
+  },
+  {
     id: 6,
     isFlagship: false,
     title: "cloud-api-cicd-terraform",
@@ -339,7 +378,7 @@ function Projects() {
             Supporting Systems & Infrastructure Projects
           </h3>
           <p className="supporting-projects-subtitle">
-            Complementary projects demonstrating cloud API backends, Linux systems engineering, low-level socket programming, and utility automation.
+            Complementary projects demonstrating applied AI backends, cloud API backends, Linux systems engineering, low-level socket programming, and utility automation.
           </p>
 
           <div className="projects-supporting-grid">

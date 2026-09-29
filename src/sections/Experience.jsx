@@ -138,7 +138,7 @@ function Experience() {
 
             <div className="experience-project-links">
               <a
-                href="https://github.com/lupenox/CRN"
+                href="https://github.com/lupenox/CRN---fork"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="experience-link"

@@ -17,7 +17,7 @@ Deployed on Vercel: [https://www.lupenoxsystems.com](https://www.lupenoxsystems.
 
 1. **LiveKit AI Mock Interview Agent**: Real-time voice agent with LiveKit Agents, Deepgram STT, ElevenLabs TTS, Silero VAD, Groq/Gemini reasoning, 2-stage state machine, and Next.js client usage dashboard.
 2. **Local AI Chatbot**: Fully local desktop chat app using Flask backend, Hugging Face models (FLAN-T5, TinyLlama, Phi-2), Ollama API, openWakeWord, and Electron UI.
-3. **Autonomous AI Job Source Agent**: Agentic job crawler powered by Apify, Gemini 1.5 Flash LLM candidate reranking, Playwright headless browser, and Pytest unit suite.
+3. **Autonomous AI Job Source Agent**: Agentic job crawler powered by Apify, Gemini LLM candidate reranking, Playwright headless browser, and Pytest unit suite.
 4. **Bash Guardian AI**: Personal AI assistant guardrail design, prompt engineering, LoRA fine-tuning prep, and Streamlit testing GUI.
 5. **SCADA Anomaly Detection**: Gas pipeline sensor anomaly classification using Support Vector Machines (SVM) with scikit-learn.
 
