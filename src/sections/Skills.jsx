@@ -10,7 +10,7 @@ const skillList = {
       { name: "LiveKit Agents" },
       { name: "Apify API" },
       { name: "Playwright" },
-      { name: "Gemini 1.5 Flash" },
+      { name: "Gemini" },
       { name: "Multi-Stage State Machines" },
     ],
   },
