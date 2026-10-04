@@ -17,7 +17,7 @@ function Experience() {
             <div className="experience-card-header">
               <h3>University of Wisconsin–Milwaukee</h3>
               <span className="experience-date">
-                B.S. Computer Science • Expected December 2026
+                B.S. Computer Science • Expected May 2027
               </span>
             </div>
 
@@ -44,7 +44,7 @@ function Experience() {
             </div>
 
             <div className="experience-availability-tag">
-              🎓 Seeking Remote AI Engineering / Applied AI Internships & Entry-Level Roles • Available Full-Time <strong>January 2027</strong>.
+              🎓 Seeking Remote AI Engineering / Applied AI Internships & Entry-Level Roles • Available Full-Time <strong>June 2027</strong>.
             </div>
           </article>
 
@@ -77,7 +77,7 @@ function Experience() {
             </div>
 
             <a
-              href="https://www.linkedin.com/in/logan-lapierre-555348354/details/certifications/"
+              href="https://www.linkedin.com/in/loganaidev/details/certifications/"
               target="_blank"
               rel="noopener noreferrer"
               className="experience-link"
