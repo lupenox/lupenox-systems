@@ -47,5 +47,5 @@ npm run build
 
 **Logan Lapierre**  
 B.S. Computer Science, University of Wisconsin–Milwaukee (Expected May 2027)  
-Seeking remote AI Engineering, Applied AI, and AI Software Engineering roles starting January 2027.
+Seeking remote AI Engineering, Applied AI, and AI Software Engineering roles starting June 2027.
 

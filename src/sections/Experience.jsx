@@ -44,7 +44,7 @@ function Experience() {
             </div>
 
             <div className="experience-availability-tag">
-              🎓 Seeking Remote AI Engineering / Applied AI Internships & Entry-Level Roles • Available Full-Time <strong>January 2027</strong>.
+              🎓 Seeking Remote AI Engineering / Applied AI Internships & Entry-Level Roles • Available Full-Time <strong>June 2027</strong>.
             </div>
           </article>
 
