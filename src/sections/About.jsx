@@ -31,7 +31,7 @@ function About() {
             </p>
 
             <div className="about-highlight-box">
-              🎯 <strong>Career Target:</strong> I am actively seeking remote <strong>AI Engineering</strong>, <strong>Applied AI</strong>, or <strong>AI Software Engineering</strong> internships and entry-level roles. Expected graduation: <strong>December 2026</strong> (Available for full-time employment starting <strong>January 2027</strong>).
+              🎯 <strong>Career Target:</strong> I am actively seeking remote <strong>AI Engineering</strong>, <strong>Applied AI</strong>, or <strong>AI Software Engineering</strong> internships and entry-level roles. Expected graduation: <strong>May 2027</strong> (Available for full-time employment starting <strong>January 2027</strong>).
             </div>
           </div>
         </div>

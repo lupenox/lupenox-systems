@@ -8,7 +8,7 @@ function Contact() {
         <h2>Get In Touch</h2>
 
         <p className="contact-subtitle">
-          I am seeking remote AI Engineering, Applied AI, or AI Software Engineering internships and entry-level roles. Graduating December 2026 (Available full-time January 2027).
+          I am seeking remote AI Engineering, Applied AI, or AI Software Engineering internships and entry-level roles. Graduating May 2027 (Available full-time January 2027).
         </p>
 
         <div className="contact-grid">
@@ -26,7 +26,7 @@ function Contact() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/logan-lapierre-555348354/"
+            href="https://www.linkedin.com/in/loganaidev/"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-card"
