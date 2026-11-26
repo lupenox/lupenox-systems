@@ -176,9 +176,45 @@ function Experience() {
 
           <article className="experience-card supporting-work-card">
             <div className="experience-card-header">
+              <h3>Software Developer, AI Coding Assistant Evaluation</h3>
+              <span className="experience-date">
+                Alignerr • Contract, Remote | October 2026 – Present
+              </span>
+            </div>
+
+            <p className="experience-description">
+              Contract software development work evaluating AI coding assistants.
+            </p>
+
+            <div className="experience-pill-list">
+              <span className="experience-pill">Contract</span>
+              <span className="experience-pill">Remote</span>
+            </div>
+          </article>
+
+          <article className="experience-card supporting-work-card">
+            <div className="experience-card-header">
+              <h3>AI Training Contractor</h3>
+              <span className="experience-date">
+                Handshake AI • Contract, Remote | October 2026 – Present
+              </span>
+            </div>
+
+            <p className="experience-description">
+              Complete paid AI training tasks reviewing and labeling audio, visual, and text data.
+            </p>
+
+            <div className="experience-pill-list">
+              <span className="experience-pill">Contract</span>
+              <span className="experience-pill">Remote</span>
+            </div>
+          </article>
+
+          <article className="experience-card supporting-work-card">
+            <div className="experience-card-header">
               <h3>Server</h3>
               <span className="experience-date">
-                New Perspective Senior Living • Waukesha, WI | June 2026 – Present
+                New Perspective Senior Living • Waukesha, WI | June 2026 – October 2026
               </span>
             </div>
 
