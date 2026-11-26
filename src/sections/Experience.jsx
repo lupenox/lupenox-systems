@@ -17,7 +17,7 @@ function Experience() {
             <div className="experience-card-header">
               <h3>University of Wisconsin–Milwaukee</h3>
               <span className="experience-date">
-                B.S. Computer Science • Expected December 2026
+                B.S. Computer Science • Expected May 2027
               </span>
             </div>
 
@@ -44,7 +44,7 @@ function Experience() {
             </div>
 
             <div className="experience-availability-tag">
-              🎓 Seeking Remote AI Engineering / Applied AI Internships & Entry-Level Roles • Available Full-Time <strong>January 2027</strong>.
+              🎓 Seeking Remote AI Engineering / Applied AI Internships & Entry-Level Roles • Available Full-Time <strong>June 2027</strong>.
             </div>
           </article>
 
@@ -77,7 +77,7 @@ function Experience() {
             </div>
 
             <a
-              href="https://www.linkedin.com/in/logan-lapierre-555348354/details/certifications/"
+              href="https://www.linkedin.com/in/loganaidev/details/certifications/"
               target="_blank"
               rel="noopener noreferrer"
               className="experience-link"
@@ -176,9 +176,45 @@ function Experience() {
 
           <article className="experience-card supporting-work-card">
             <div className="experience-card-header">
+              <h3>Software Developer, AI Coding Assistant Evaluation</h3>
+              <span className="experience-date">
+                Alignerr • Contract, Remote | October 2026 – Present
+              </span>
+            </div>
+
+            <p className="experience-description">
+              Contract software development work evaluating AI coding assistants.
+            </p>
+
+            <div className="experience-pill-list">
+              <span className="experience-pill">Contract</span>
+              <span className="experience-pill">Remote</span>
+            </div>
+          </article>
+
+          <article className="experience-card supporting-work-card">
+            <div className="experience-card-header">
+              <h3>AI Training Contractor</h3>
+              <span className="experience-date">
+                Handshake AI • Contract, Remote | October 2026 – Present
+              </span>
+            </div>
+
+            <p className="experience-description">
+              Complete paid AI training tasks reviewing and labeling audio, visual, and text data.
+            </p>
+
+            <div className="experience-pill-list">
+              <span className="experience-pill">Contract</span>
+              <span className="experience-pill">Remote</span>
+            </div>
+          </article>
+
+          <article className="experience-card supporting-work-card">
+            <div className="experience-card-header">
               <h3>Server</h3>
               <span className="experience-date">
-                New Perspective Senior Living • Waukesha, WI | June 2026 – Present
+                New Perspective Senior Living • Waukesha, WI | June 2026 – October 2026
               </span>
             </div>
 

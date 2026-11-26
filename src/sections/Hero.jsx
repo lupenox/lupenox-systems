@@ -29,7 +29,7 @@ function Hero() {
         <div className="hero-availability">
           <span className="avail-icon">🎓</span>
           <span>
-            <strong>Seeking Remote Roles:</strong> AI Engineering, Applied AI & AI Software Engineering internships or entry-level opportunities. Expected Graduation: <strong>December 2026</strong> (Available full-time <strong>January 2027</strong>).
+            <strong>Seeking Remote Roles:</strong> AI Engineering, Applied AI & AI Software Engineering internships or entry-level opportunities. Expected Graduation: <strong>May 2027</strong> (Available full-time <strong>June 2027</strong>).
           </span>
         </div>
 
@@ -53,7 +53,7 @@ function Hero() {
             GitHub Profile ↗
           </a>
           <a
-            href="https://www.linkedin.com/in/logan-lapierre-555348354/"
+            href="https://www.linkedin.com/in/loganaidev/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary"
